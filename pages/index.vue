@@ -150,7 +150,7 @@
     </section>
     
     <div class="fixed bottom-0 left-0 right-0 flex justify-center pointer-events-none z-50">
-      <div class="w-full px-4">
+      <div class="max-w-6xl w-full">
         <Transition name="fade">
           <button
             v-show="showScrollTop"
