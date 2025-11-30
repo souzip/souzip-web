@@ -149,7 +149,7 @@
       </div>
     </section>
     
-    <div class="fixed bottom-0 left-0 right-0 flex justify-center pointer-events-none z-50">
+    <div class="fixed bottom-0 left-0 right-0 flex justify-center pointer-events-none z-50 px-4 xl:px-0">
       <div class="max-w-6xl w-full">
         <Transition name="fade">
           <button
@@ -220,7 +220,6 @@ const submitWaitlist = async () => {
 const handleScroll = () => {
   const currentScrollY = window.scrollY
   
-  // 스크롤 위치가 300px 이상이고, 아래로 스크롤 중일 때만 버튼 표시
   if (currentScrollY > 300 && currentScrollY > lastScrollY.value) {
     showScrollTop.value = true
   } else {
