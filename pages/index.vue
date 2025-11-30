@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-white">
-    <section class="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section class="relative min-h-[95vh] flex items-center justify-center px-4 overflow-hidden">
       <div class="absolute inset-0 -z-10">
         <div class="absolute top-20 right-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-40"></div>
         <div class="absolute bottom-20 left-20 w-96 h-96 bg-purple-50 rounded-full blur-3xl opacity-40"></div>
