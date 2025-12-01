@@ -6,7 +6,7 @@
           <img
             src="../public/sou.zip.png"
             alt="sou.zip"
-            class="h-12 md:h-12 w-auto mb-3"
+            class="h-10 sm:h-12 lg:h-14 w-auto mb-3"
           />
           <p class="text-gray-600 text-sm leading-relaxed">
             여행의 순간을 .zip으로

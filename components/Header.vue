@@ -5,7 +5,7 @@
         <img
           src="../public/sou.zip.png"
           alt="sou.zip"
-          class="h-18 md:h-16 w-auto"
+          class="h-10 sm:h-12 lg:h-16 w-auto"
         />
       </NuxtLink>
       
