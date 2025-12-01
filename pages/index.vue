@@ -6,6 +6,22 @@
         <div class="absolute bottom-20 left-20 w-96 h-96 bg-purple-50 rounded-full blur-3xl opacity-40"></div>
       </div>
       
+      <div class="absolute top-32 left-20 w-32 h-32 md:w-40 md:h-40 character-float">
+        <img src="../public/1.svg" alt="캐릭터 1" class="w-full h-full object-contain" />
+      </div>
+      
+      <div class="absolute top-48 right-32 w-28 h-28 md:w-36 md:h-36 character-float" style="animation-delay: 0.5s">
+        <img src="../public/2.svg" alt="캐릭터 2" class="w-full h-full object-contain" />
+      </div>
+      
+      <div class="absolute bottom-40 left-32 w-36 h-36 md:w-44 md:h-44 character-float" style="animation-delay: 1s">
+        <img src="../public/3.svg" alt="캐릭터 3" class="w-full h-full object-contain" />
+      </div>
+      
+      <div class="absolute bottom-32 right-20 w-32 h-32 md:w-40 md:h-40 character-float" style="animation-delay: 1.5s">
+        <img src="../public/4.svg" alt="캐릭터 4" class="w-full h-full object-contain" />
+      </div>
+      
       <div class="max-w-6xl mx-auto text-center">
         <div class="mb-8">
           <h1 class="text-7xl md:text-8xl font-bold tracking-tight text-blue-600">
@@ -254,5 +270,42 @@ onUnmounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.character-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.character-walk {
+  animation: walk 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes walk {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0) rotate(3deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+}
+
+.character-walk:hover {
+  animation-play-state: paused;
 }
 </style>
