@@ -36,7 +36,7 @@
         
         <!-- 법적 고지 -->
         <div>
-          <h3 class="font-semibold text-gray-900 mb-4">법적 고지</h3>
+          <h3 class="font-semibold text-gray-900 mb-4">이용약관</h3>
           <ul class="space-y-2">
             <li>
               <NuxtLink to="/terms" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
