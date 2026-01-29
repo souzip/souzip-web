@@ -129,7 +129,7 @@
         <section class="mb-8">
           <h2 class="text-2xl font-bold mb-4">10. 개인정보 보호책임자</h2>
           <p class="text-gray-600 mb-4">
-            담당자: 전강민, 안가연
+            담당자: 안가연, 김진범
           </p>
           <p class="text-gray-600">
             문의: team.sou.zip@gmail.com 또는 앱 내 문의
