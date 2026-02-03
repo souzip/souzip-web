@@ -13,12 +13,9 @@
           <a href="/#features" class="text-gray-600 hover:text-gray-900 transition-colors">
             기능
           </a>
-          <!-- <a href="/#download" class="text-gray-600 hover:text-gray-900 transition-colors">
+          <a href="/#download" class="text-gray-600 hover:text-gray-900 transition-colors">
             다운로드
           </a>
-          <a href="/#waitlist" class="text-gray-600 hover:text-gray-900 transition-colors">
-            사전등록
-          </a> -->
         </div>
         
         <button
@@ -52,20 +49,13 @@
             >
               기능
             </a>
-            <!-- <a
+            <a
               href="/#download"
               class="block text-gray-600 hover:text-gray-900 py-2"
               @click="mobileMenuOpen = false"
             >
               다운로드
             </a>
-            <a
-              href="/#download"
-              class="block w-full px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-all text-center"
-              @click="mobileMenuOpen = false"
-            >
-              앱 다운로드
-            </a> -->
           </div>
         </div>
       </transition>
