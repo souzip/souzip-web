@@ -235,7 +235,7 @@
           <button
             v-show="showScrollTop"
             @click="scrollToTop"
-            class="ml-auto mb-32 w-12 h-12 bg-yellow-400 text-white rounded-full shadow-lg hover:bg-yellow-300 transition-all transform flex items-center justify-center pointer-events-auto"
+            class="ml-auto mb-8 w-12 h-12 bg-yellow-400 text-white rounded-full shadow-lg hover:bg-yellow-300 transition-all transform flex items-center justify-center pointer-events-auto"
             aria-label="맨 위로"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
