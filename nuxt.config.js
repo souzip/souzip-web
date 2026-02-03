@@ -5,14 +5,41 @@ export default defineNuxtConfig({
   
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    'nuxt-gtag'
   ],
+  
+  gtag: {
+    id: 'G-KBK1GK0DMM'
+  },
   
   site: {
     url: 'https://souzip.com',
     name: 'sou.zip',
     description: '여행의 순간을 선물로, AI가 추천하는 여행 기념품',
-    defaultLocale: 'ko'
+    defaultLocale: 'ko',
+    trailingSlash: false
+  },
+  
+  sitemap: {
+    strictNuxtContentPaths: true,
+    enabled: true,
+    hostname: 'https://souzip.com',
+    gzip: true,
+    exclude: [],
+    routes: [
+      '/',
+      '/privacy',
+      '/terms',
+      '/location-terms',
+      '/marketing-terms'
+    ]
+  },
+  
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Sitemap: 'https://souzip.com/sitemap.xml'
   },
   
   app: {
@@ -38,10 +65,64 @@ export default defineNuxtConfig({
         { property: 'og:locale', content: 'ko_KR' },
         { name: 'robots', content: 'index, follow' },
         { name: 'googlebot', content: 'index, follow' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'theme-color', content: '#FACC15' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+        { name: 'apple-mobile-web-app-title', content: 'sou.zip' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'sou.zip - 여행 기념품 추천 플랫폼' },
+        { name: 'twitter:description', content: '여행의 순간을 .zip으로, AI가 추천하는 여행 기념품' },
+        { name: 'twitter:site', content: '@souzip' },
+        // 네이버 블로그 최적화
+        { property: 'og:article:author', content: 'sou.zip' },
+        // 구조화된 데이터를 위한 추가 정보
+        { name: 'application-name', content: 'sou.zip' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://souzip.com' }
+        { rel: 'canonical', href: 'https://souzip.com' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/manifest.json' }
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'MobileApplication',
+            'name': 'sou.zip',
+            'description': '여행의 순간을 선물로, AI가 추천하는 여행 기념품',
+            'applicationCategory': 'TravelApplication',
+            'operatingSystem': 'iOS, Android',
+            'offers': {
+              '@type': 'Offer',
+              'price': '0',
+              'priceCurrency': 'KRW'
+            },
+            'aggregateRating': {
+              '@type': 'AggregateRating',
+              'ratingValue': '5.0',
+              'ratingCount': '1'
+            }
+          })
+        },
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            'name': 'sou.zip',
+            'url': 'https://souzip.com',
+            'logo': 'https://souzip.com/logo.png',
+            'sameAs': [
+              'https://www.instagram.com/sou.zip.app',
+              'https://www.threads.com/@sou.zip.app'
+            ]
+          })
+        }
       ]
     }
   }

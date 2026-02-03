@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@nuxtjs/seo": "latest",
-    "@nuxtjs/tailwindcss": "latest"
+    "@nuxtjs/tailwindcss": "latest",
+    "nuxt-gtag": "^4.1.0"
   }
 }
