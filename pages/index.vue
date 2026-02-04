@@ -112,7 +112,7 @@
         <div ref="statsSection" class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3" style="color: #FF6640;">
-              { formatNumber(animatedCountries) }}+</div>
+              {{ formatNumber(animatedCountries) }}+</div>
             <div class="text-gray-700 font-semibold text-base md:text-lg">국가</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
