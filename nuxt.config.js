@@ -91,7 +91,6 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://souzip.com' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        { rel: 'manifest', href: '/manifest.json' },
         { rel: 'alternate', hreflang: 'ko', href: 'https://souzip.com' },
         { rel: 'alternate', hreflang: 'x-default', href: 'https://souzip.com' }
       ],

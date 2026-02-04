@@ -98,7 +98,39 @@
       </div>
     </section>
     
-    <section id="download" class="py-24 px-4 bg-white">
+    <section class="py-24 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+            지금까지 <span class="text-yellow-400">sou.zip</span>과 함께
+          </h3>
+          <p class="text-gray-600">
+            전 세계 여행자들이 함께 만들어가는 기념품 이야기
+          </p>
+        </div>
+        
+        <div ref="statsSection" class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
+            <div class="text-5xl md:text-6xl font-bold text-yellow-400 mb-3">{{ formatNumber(animatedUsers) }}+</div>
+            <div class="text-gray-700 font-semibold text-base md:text-lg">활성 사용자</div>
+          </div>
+          <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
+            <div class="text-5xl md:text-6xl font-bold text-yellow-400 mb-3">{{ formatNumber(animatedSouvenirs) }}+</div>
+            <div class="text-gray-700 font-semibold text-base md:text-lg">기념품 정보</div>
+          </div>
+          <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
+            <div class="text-5xl md:text-6xl font-bold text-yellow-400 mb-3">{{ formatNumber(animatedCountries) }}+</div>
+            <div class="text-gray-700 font-semibold text-base md:text-lg">국가</div>
+          </div>
+          <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
+            <div class="text-5xl md:text-6xl font-bold text-yellow-400 mb-3">{{ formatNumber(animatedCities) }}+</div>
+            <div class="text-gray-700 font-semibold text-base md:text-lg">도시</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="download" class="py-24 px-4 bg-gray-50">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
           <h3 class="text-3xl md:text-4xl font-bold mb-4">
@@ -202,6 +234,56 @@ const submitSuccess = ref(false)
 const showScrollTop = ref(false)
 const lastScrollY = ref(0)
 
+// 통계 숫자 애니메이션
+const statsSection = ref(null)
+const animatedUsers = ref(0)
+const animatedSouvenirs = ref(0)
+const animatedCountries = ref(0)
+const animatedCities = ref(0)
+const statsAnimated = ref(false)
+
+const targetUsers = 100
+const targetSouvenirs = 100
+const targetCountries = 100
+const targetCities = 40000
+
+const formatNumber = (num) => {
+  return Math.floor(num).toLocaleString('ko-KR')
+}
+
+const animateValue = (ref, start, end, duration) => {
+  const startTime = performance.now()
+  const range = end - start
+  
+  const step = (currentTime) => {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    
+    // easeOutExpo 이징 함수
+    const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)
+    
+    ref.value = start + (range * eased)
+    
+    if (progress < 1) {
+      requestAnimationFrame(step)
+    } else {
+      ref.value = end
+    }
+  }
+  
+  requestAnimationFrame(step)
+}
+
+const startStatsAnimation = () => {
+  if (statsAnimated.value) return
+  
+  statsAnimated.value = true
+  animateValue(animatedUsers, 0, targetUsers, 2000)
+  animateValue(animatedSouvenirs, 0, targetSouvenirs, 2000)
+  animateValue(animatedCountries, 0, targetCountries, 2000)
+  animateValue(animatedCities, 0, targetCities, 2500)
+}
+
 // QR 코드 생성 (각 스토어로 직접 연결)
 const appStoreQR = computed(() => {
   return `https://quickchart.io/qr?text=${encodeURIComponent(appStoreUrl)}&size=200`
@@ -265,6 +347,22 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  
+  // Intersection Observer로 통계 섹션이 보이면 애니메이션 시작
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !statsAnimated.value) {
+          startStatsAnimation()
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
+  
+  if (statsSection.value) {
+    observer.observe(statsSection.value)
+  }
 })
 
 onUnmounted(() => {
