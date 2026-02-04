@@ -2,8 +2,8 @@
   <div class="min-h-screen bg-white">
     <section class="relative min-h-[95vh] flex items-center justify-center px-4 overflow-hidden">
       <div class="absolute inset-0 -z-10">
-        <div class="absolute top-20 right-20 w-96 h-96 bg-yellow-50 rounded-full blur-3xl opacity-40"></div>
-        <div class="absolute bottom-20 left-20 w-96 h-96 bg-amber-50 rounded-full blur-3xl opacity-40"></div>
+        <div class="absolute top-20 right-20 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-40"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-40"></div>
       </div>
       
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -29,12 +29,12 @@
       <div class="max-w-6xl mx-auto text-center">
         <div class="mb-8">
           <h1 class="text-3xl md:text-6xl font-bold tracking-tight text-gray-900">
-            여행 기념품 정보는 <span class="text-yellow-400">수집</span>에서!
+            여행 기념품 정보는 <span style="color: #FF6640;">수집</span>에서!
           </h1>
         </div>
         
         <p class="text-1xl md:text-4xl text-gray-600 max-w-2xl mx-auto">
-          위치 기반 여행 기념품 모음집, <span class="text-yellow-400 font-semibold">sou.zip!</span>
+          위치 기반 여행 기념품 모음집, <span style="color: #FF6640;" class="font-semibold">sou.zip!</span>
         </p>
       </div>
       
@@ -52,13 +52,13 @@
       <div class="max-w-6xl mx-auto">
         <h3 class="text-3xl md:text-4xl font-bold text-center mb-16">
           여행이 끝나도<br />
-          <span class="text-yellow-400">추억은 계속됩니다</span>
+          <span style="color: #FF6640;">추억은 계속됩니다</span>
         </h3>
         
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-white p-8 rounded-3xl transition-shadow">
-            <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
               </svg>
             </div>
@@ -70,8 +70,8 @@
           </div>
           
           <div class="bg-white p-8 rounded-3xl transition-shadow">
-            <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
               </svg>
             </div>
@@ -83,8 +83,8 @@
           </div>
           
           <div class="bg-white p-8 rounded-3xl transition-shadow">
-            <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
               </svg>
             </div>
@@ -102,7 +102,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h3 class="text-3xl md:text-4xl font-bold mb-4">
-            지금까지 <span class="text-yellow-400">sou.zip</span>과 함께
+            지금까지 <span style="color: #FF6640;">sou.zip</span>과 함께
           </h3>
           <p class="text-gray-600">
             전 세계 여행자들이 함께 만들어가는 기념품 이야기
@@ -138,7 +138,7 @@
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
           <h3 class="text-3xl md:text-4xl font-bold mb-4">
-            지금 바로 <span class="text-yellow-400">다운로드</span>하세요
+            지금 바로 <span style="color: #FF6640;">다운로드</span>하세요
           </h3>
           <p class="text-gray-600">
             여행의 순간을 특별하게 만들어줄 sou.zip을 만나보세요
@@ -148,7 +148,7 @@
         <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           <!-- iOS 다운로드 -->
           <div class="flex flex-col items-center space-y-4">
-            <a 
+            <a
               :href="appStoreUrl"
               target="_blank"
               rel="noopener noreferrer"
@@ -163,9 +163,9 @@
               </div>
             </a>
             <div class="bg-white p-4 rounded-2xl shadow-md w-full flex justify-center">
-              <img 
-                :src="appStoreQR" 
-                alt="App Store QR Code" 
+              <img
+                :src="appStoreQR"
+                alt="App Store QR Code"
                 class="w-48 h-48"
               />
             </div>
@@ -173,7 +173,7 @@
           
           <!-- Android 다운로드 -->
           <div class="flex flex-col items-center space-y-4">
-            <a 
+            <a
               :href="playStoreUrl"
               target="_blank"
               rel="noopener noreferrer"
@@ -188,9 +188,9 @@
               </div>
             </a>
             <div class="bg-white p-4 rounded-2xl shadow-md w-full flex justify-center">
-              <img 
-                :src="playStoreQR" 
-                alt="Google Play QR Code" 
+              <img
+                :src="playStoreQR"
+                alt="Google Play QR Code"
                 class="w-48 h-48"
               />
             </div>
@@ -205,7 +205,10 @@
           <button
             v-show="showScrollTop"
             @click="scrollToTop"
-            class="ml-auto mb-8 md:mb-16 lg:mb-16 w-12 h-12 bg-yellow-400 text-white rounded-full shadow-lg hover:bg-yellow-300 transition-all transform flex items-center justify-center pointer-events-auto"
+            class="ml-auto mb-4 md:mb-16 lg:mb-16 w-12 h-12 rounded-full shadow-lg transition-all transform flex items-center justify-center pointer-events-auto"
+            style="background-color: #FF6640; color: white;"
+            @mouseover="(e) => e.target.style.backgroundColor = '#FF7F5C'"
+            @mouseout="(e) => e.target.style.backgroundColor = '#FF6640'"
             aria-label="맨 위로"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -217,6 +220,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
@@ -260,7 +264,7 @@ const animateValue = (ref, start, end, duration) => {
     const elapsed = currentTime - startTime
     const progress = Math.min(elapsed / duration, 1)
     
-    const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)
+    const eased = 1 - (1 - progress) * (1 - progress)
     
     ref.value = start + (range * eased)
     
@@ -278,9 +282,9 @@ const startStatsAnimation = () => {
   if (statsAnimated.value) return
   
   statsAnimated.value = true
-  animateValue(animatedUsers, 0, targetUsers, 2000)
-  animateValue(animatedSouvenirs, 0, targetSouvenirs, 2000)
-  animateValue(animatedCountries, 0, targetCountries, 2000)
+  animateValue(animatedUsers, 0, targetUsers, 2500)
+  animateValue(animatedSouvenirs, 0, targetSouvenirs, 2500)
+  animateValue(animatedCountries, 0, targetCountries, 2500)
   animateValue(animatedCities, 0, targetCities, 2500)
 }
 
