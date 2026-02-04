@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@10.28.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@nuxtjs/seo": "latest",
-    "@nuxtjs/tailwindcss": "latest"
+    "@nuxtjs/tailwindcss": "latest",
+    "nuxt-gtag": "^4.1.0"
   }
 }
