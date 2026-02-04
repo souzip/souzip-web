@@ -228,9 +228,6 @@ useHead({
 const appStoreUrl = 'https://apps.apple.com/kr/app/%EC%88%98%EC%A7%91-sou-zip-%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89-%EA%B8%B0%EB%85%90%ED%92%88-%EC%B6%94%EC%B2%9C/id6757256797'
 const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.swyp.souzip&pcampaignid=web_share'
 
-const isSubmitting = ref(false)
-const submitMessage = ref('')
-const submitSuccess = ref(false)
 const showScrollTop = ref(false)
 const lastScrollY = ref(0)
 
@@ -291,39 +288,6 @@ const appStoreQR = computed(() => {
 const playStoreQR = computed(() => {
   return `https://quickchart.io/qr?text=${encodeURIComponent(playStoreUrl)}&size=200`
 })
-
-const formData = ref({
-  email: '',
-  name: '',
-  destination: ''
-})
-
-const submitWaitlist = async () => {
-  isSubmitting.value = true
-  submitMessage.value = ''
-  
-  try {
-    const response = await $fetch('/api/waitlist', {
-      method: 'POST',
-      body: formData.value
-    })
-    
-    submitSuccess.value = true
-    submitMessage.value = '신청이 완료되었습니다! 출시 소식을 보내드릴게요.'
-    
-    formData.value = { email: '', name: '', destination: '' }
-    
-    setTimeout(() => {
-      submitMessage.value = ''
-    }, 5000)
-    
-  } catch (error) {
-    submitSuccess.value = false
-    submitMessage.value = '오류가 발생했습니다. 다시 시도해주세요.'
-  } finally {
-    isSubmitting.value = false
-  }
-}
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY
