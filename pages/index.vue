@@ -259,7 +259,6 @@ const animateValue = (ref, start, end, duration) => {
     const elapsed = currentTime - startTime
     const progress = Math.min(elapsed / duration, 1)
     
-    // easeOutExpo 이징 함수
     const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)
     
     ref.value = start + (range * eased)
