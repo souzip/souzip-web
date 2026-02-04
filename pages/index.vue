@@ -280,7 +280,6 @@ const startStatsAnimation = () => {
   animateValue(animatedCities, 0, targetCities, 2500)
 }
 
-// QR 코드 생성 (각 스토어로 직접 연결)
 const appStoreQR = computed(() => {
   return `https://quickchart.io/qr?text=${encodeURIComponent(appStoreUrl)}&size=200`
 })
@@ -311,7 +310,6 @@ const scrollToTop = () => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   
-  // Intersection Observer로 통계 섹션이 보이면 애니메이션 시작
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
