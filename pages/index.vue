@@ -111,23 +111,19 @@
         
         <div ref="statsSection" class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
-            <div class="text-5xl md:text-6xl font-bold mb-3" style="color: #FF6640;">
-              {{ formatNumber(animatedCountries) }}+</div>
+            <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedCountries) }}<span style="position: relative; top: -0.3rem;">+</span></div>
             <div class="text-gray-700 font-semibold text-base md:text-lg">국가</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
-            <div class="text-5xl md:text-6xl font-bold mb-3" style="color: #FF6640;">
-              {{ formatNumber(animatedCities) }}+</div>
+            <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedCities) }}<span style="position: relative; top: -0.3rem;">+</span></div>
             <div class="text-gray-700 font-semibold text-base md:text-lg">도시</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
-            <div class="text-5xl md:text-6xl font-bold mb-3" style="color: #FF6640;">
-              {{ formatNumber(animatedSouvenirs) }}+</div>
+            <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedSouvenirs) }}<span style="position: relative; top: -0.3rem;">+</span></div>
             <div class="text-gray-700 font-semibold text-base md:text-lg">기념품 정보</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
-            <div class="text-5xl md:text-6xl font-bold mb-3" style="color: #FF6640;">
-              {{ formatNumber(animatedUsers) }}+</div>
+            <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedUsers) }}<span style="position: relative; top: -0.3rem;">+</span></div>
             <div class="text-gray-700 font-semibold text-base md:text-lg">활성 사용자</div>
           </div>
         </div>
