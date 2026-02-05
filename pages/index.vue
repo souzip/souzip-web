@@ -160,7 +160,7 @@
                 :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="press-card group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex-shrink-0"
+                class="press-card group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex-shrink-0 flex flex-col"
               >
                 <div 
                   class="relative h-48 overflow-hidden flex items-center justify-center"
@@ -179,15 +179,15 @@
                     {{ item.platform }}
                   </div>
                 </div>
-                <div class="p-6">
+                <div class="p-6 flex flex-col flex-1">
                   <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">{{ item.date }}</div>
-                  <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors line-clamp-2" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
+                  <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors line-clamp-2 h-14" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
                     {{ item.title }}
                   </h4>
-                  <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
+                  <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
                     {{ item.description }}
                   </p>
-                  <div class="flex items-center font-medium text-sm" style="color: #FF6640;">
+                  <div class="flex items-center font-medium text-sm mt-auto" style="color: #FF6640;">
                     자세히 보기
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
