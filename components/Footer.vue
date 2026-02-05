@@ -60,6 +60,11 @@
                 앱 다운로드
               </a>
             </li>
+            <li>
+              <a href="/#faq" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                자주 묻는 질문
+              </a>
+            </li>
           </ul>
         </div>
         

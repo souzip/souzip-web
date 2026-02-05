@@ -293,7 +293,7 @@
     </section>
     
     <!-- FAQ 섹션 -->
-    <section class="py-24 px-4 bg-white">
+    <section id="faq" class="py-24 px-4 bg-white">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16">
           <h3 class="text-3xl md:text-4xl font-bold mb-4">
