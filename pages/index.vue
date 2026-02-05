@@ -203,10 +203,8 @@
         <div class="text-center">
           <NuxtLink 
             to="/press" 
-            class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-lg"
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition-all"
             style="background-color: #FF6640; color: white;"
-            @mouseover="(e) => e.target.style.backgroundColor = '#FF7F5C'"
-            @mouseout="(e) => e.target.style.backgroundColor = '#FF6640'"
           >
             <span>미디어 소개 더 보기</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
