@@ -153,7 +153,7 @@
           >
             <div class="press-slider" :style="{ animationPlayState: sliderPaused ? 'paused' : 'running' }">
               <!-- 여러 세트 복제 (끊김 없는 무한 슬라이드) -->
-              <template v-for="setIndex in 8" :key="`set-${setIndex}`">
+              <template v-for="setIndex in 20" :key="`set-${setIndex}`">
               <a
                 v-for="item in pressItems"
                 :key="`${setIndex}-${item.id}`"
@@ -535,6 +535,7 @@ const sliderContainer = ref(null)
 const isDragging = ref(false)
 const startX = ref(0)
 const scrollLeft = ref(0)
+let scrollTimeout = null
 
 const pauseSlider = () => {
   sliderPaused.value = true
@@ -550,6 +551,7 @@ const handleMouseDown = (e) => {
   startX.value = e.pageX - sliderContainer.value.offsetLeft
   scrollLeft.value = sliderContainer.value.scrollLeft
   sliderContainer.value.style.cursor = 'grabbing'
+  pauseSlider()
 }
 
 const handleMouseMove = (e) => {
@@ -567,14 +569,26 @@ const handleMouseUp = () => {
   if (!sliderContainer.value) return
   isDragging.value = false
   sliderContainer.value.style.cursor = 'grab'
+  
+  // 드래그가 끝난 후 위치 체크 및 조정
+  setTimeout(() => {
+    checkScrollPosition()
+  }, 50)
 }
 
 const handleMouseLeave = () => {
   if (isDragging.value && sliderContainer.value) {
     sliderContainer.value.style.cursor = 'grab'
+    isDragging.value = false
+    
+    // 드래그 중 벗어난 경우도 위치 체크
+    setTimeout(() => {
+      checkScrollPosition()
+      resumeSlider()
+    }, 50)
+  } else {
+    resumeSlider()
   }
-  isDragging.value = false
-  resumeSlider()
 }
 
 const checkScrollPosition = () => {
@@ -593,9 +607,15 @@ const checkScrollPosition = () => {
   if (scrollLeft >= setWidth * 4) {
     sliderContainer.value.scrollLeft = scrollLeft - setWidth * 4
   }
-  // 처음으로 되돌아가면 중간으로 이동
-  else if (scrollLeft <= 0) {
-    sliderContainer.value.scrollLeft = setWidth * 4
+  // 왼쪽 끝에 가까워지면 (7번째 세트 이전)
+  else if (currentScrollLeft <= setWidth * 7) {
+    sliderContainer.value.style.scrollBehavior = 'auto'
+    sliderContainer.value.scrollLeft = currentScrollLeft + setWidth * 6
+    setTimeout(() => {
+      if (sliderContainer.value) {
+        sliderContainer.value.style.scrollBehavior = 'smooth'
+      }
+    }, 50)
   }
 }
 
@@ -684,7 +704,7 @@ onMounted(() => {
 
   // 스크롤 이벤트 리스너 추가
   if (sliderContainer.value) {
-    // 초기 스크롤 위치를 중간으로 설정
+    // 초기 스크롤 위치를 중간으로 설정 (10번째 세트 시작점)
     const cardWidth = window.innerWidth <= 480 ? 280 : window.innerWidth <= 768 ? 300 : 400
     const gap = window.innerWidth <= 768 ? 16 : 24
     const setWidth = (cardWidth + gap) * 2
@@ -695,9 +715,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  if (sliderContainer.value) {
-    sliderContainer.value.removeEventListener('scroll', checkScrollPosition)
-  }
+  // Cleanup은 필요없음 (슬라이더 컨테이너가 함께 제거됨)
 })
 </script>
 
@@ -760,6 +778,7 @@ onUnmounted(() => {
   user-select: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 .press-slider-container::-webkit-scrollbar {
