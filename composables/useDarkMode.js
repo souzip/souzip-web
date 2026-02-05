@@ -1,10 +1,8 @@
 export const useDarkMode = () => {
-  // Nuxt의 useState 사용 (자동으로 import됨)
   const isDark = useState('isDark', () => false)
 
-  // 클라이언트에서만 실행
-  if (process.client) {
-    // 초기화
+  // 클라이언트에서만 초기화
+  onMounted(() => {
     const savedTheme = localStorage.getItem('theme')
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     
@@ -16,14 +14,12 @@ export const useDarkMode = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }
+  })
 
   const toggleDark = () => {
     isDark.value = !isDark.value
     
     if (process.client) {
-      console.log('Toggle dark mode to:', isDark.value) // 디버깅용
-      
       if (isDark.value) {
         document.documentElement.classList.add('dark')
         localStorage.setItem('theme', 'dark')
@@ -35,7 +31,7 @@ export const useDarkMode = () => {
   }
 
   return {
-    isDark: readonly(isDark),
+    isDark,
     toggleDark
   }
 }
