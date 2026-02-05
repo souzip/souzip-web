@@ -14,26 +14,26 @@
         <section class="mb-8">
           <h2 class="text-2xl font-bold mb-4 dark:text-white">2. 수집하는 개인정보 항목</h2>
           
-          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800">회원가입 시</h3>
-          <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-4">
+          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200">회원가입 시</h3>
+          <ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2 mb-4">
             <li>소셜로그인 ID(카카오/Google/Apple 등에서 제공하는 고유 식별자)</li>
             <li>프로필 정보(닉네임, 이메일 등 제공 범위 내 정보)</li>
           </ul>
           
-          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800">서비스 이용 중 자동 수집 정보</h3>
-          <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-4">
+          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200">서비스 이용 중 자동 수집 정보</h3>
+          <ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2 mb-4">
             <li>기기정보(OS, 모델명, 광고ID 등)</li>
             <li>IP 주소, 접속 로그</li>
             <li>서비스 이용 기록</li>
           </ul>
           
-          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800">콘텐츠 업로드 시</h3>
-          <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-4">
+          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200">콘텐츠 업로드 시</h3>
+          <ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2 mb-4">
             <li>사진 이미지 파일</li>
             <li>리뷰·텍스트 내용</li>
           </ul>
           
-          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800">선택적 수집(동의 시)</h3>
+          <h3 class="text-xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200">선택적 수집(동의 시)</h3>
           <ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
             <li>위치 정보(GPS 기반 실시간 위치)</li>
           </ul>
@@ -101,7 +101,7 @@
             <li>위치정보 제공 동의 철회</li>
             <li>회원 탈퇴 및 개인정보 파기 요청</li>
           </ul>
-          <p class="text-gray-600 mt-4">
+          <p class="text-gray-600 dark:text-gray-300 mt-4">
             요청은 앱 내 설정 또는 고객센터를 통해 가능합니다.
           </p>
         </section>
@@ -147,14 +147,14 @@
         </section>
         
         <section class="mb-8">
-          <p class="text-sm text-gray-500">
+          <p class="text-sm text-gray-500 dark:text-gray-400">
             공고일자: 2026년 01월 04일<br>
             시행일자: 2026년 01월 12일
           </p>
         </section>
       </div>
       
-      <div class="mt-12 pt-8 border-t border-gray-200">
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
         <NuxtLink to="/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>

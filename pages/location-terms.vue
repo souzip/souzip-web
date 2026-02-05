@@ -4,7 +4,7 @@
       <h1 class="text-4xl font-bold mb-8 dark:text-white">위치기반서비스 이용약관</h1>
 
       <div class="prose prose-lg max-w-none">
-        <p class="text-gray-600 mb-8">
+        <p class="text-gray-600 dark:text-gray-300 mb-8">
           본 약관은 "수집"(이하 "회사")이 제공하는 위치기반서비스 이용과 관련하여 회사와 이용자 간 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
         </p>
 
@@ -115,14 +115,14 @@
         </section>
 
         <section class="mb-8">
-          <p class="text-sm text-gray-500">
+          <p class="text-sm text-gray-500 dark:text-gray-400">
             공고일자: 2026년 01월 04일<br>
             시행일자: 2026년 01월 12일
           </p>
         </section>
       </div>
 
-      <div class="mt-12 pt-8 border-t border-gray-200">
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
         <NuxtLink to="/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
