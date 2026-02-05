@@ -23,7 +23,7 @@
               href="https://www.instagram.com/sou.zip.app" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center hover:opacity-80 transition-opacity group"
+              class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center group"
               aria-label="Instagram"
             >
               <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
               href="https://www.threads.com/@sou.zip.app" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+              class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center"
               aria-label="Threads"
             >
               <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@
                 href="https://www.instagram.com/sou.zip.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center hover:opacity-80 transition-opacity group"
+                class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center group"
                 aria-label="Instagram"
               >
                 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -128,7 +128,7 @@
                 href="https://www.threads.com/@sou.zip.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+                class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center"
                 aria-label="Threads"
               >
                 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
