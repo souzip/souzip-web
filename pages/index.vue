@@ -292,6 +292,205 @@
       </div>
     </section>
     
+    <!-- FAQ 섹션 -->
+    <section class="py-24 px-4 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+            자주 묻는 <span style="color: #FF6640;">질문</span>
+          </h3>
+          <p class="text-gray-600">
+            sou.zip에 대해 궁금한 점이 있으신가요?
+          </p>
+        </div>
+        
+        <div class="space-y-4">
+          <!-- FAQ 아이템 1 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              @click="toggleFaq(1)"
+              class="w-full px-6 py-5 flex items-center justify-between"
+            >
+              <span class="text-lg font-semibold text-gray-900 text-left">회원가입이 필요한가요?</span>
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                :class="{ 'rotate-180': openFaq === 1 }"
+                style="color: #FF6640;"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 1 ? '300px' : '0px', opacity: openFaq === 1 ? 1 : 0 }">
+              <div class="px-6 pb-5">
+                <p class="text-gray-600 leading-relaxed">
+                  <strong class="text-gray-900">안드로이드:</strong> 둘러보기 기능으로 회원가입 없이 일부 기능을 사용할 수 있습니다.<br>
+                  <strong class="text-gray-900">iOS:</strong> 회원가입이 필요합니다.<br><br>
+                  소셜 로그인만 지원하며, <strong class="text-gray-900">카카오, 구글, 애플</strong>로 간편하게 가입하실 수 있습니다. (안드로이드는 애플 로그인 미지원)<br>
+                  기념품 저장, 여행 계획 등 모든 기능을 이용하시려면 로그인이 필요합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 아이템 2 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              @click="toggleFaq(2)"
+              class="w-full px-6 py-5 flex items-center justify-between"
+            >
+              <span class="text-lg font-semibold text-gray-900 text-left">내 정보는 안전하게 보호되나요?</span>
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                :class="{ 'rotate-180': openFaq === 2 }"
+                style="color: #FF6640;"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 2 ? '200px' : '0px', opacity: openFaq === 2 ? 1 : 0 }">
+              <div class="px-6 pb-5">
+                <p class="text-gray-600">
+                  네, 모든 개인정보는 암호화되어 안전하게 저장되며, 관련 법령에 따라 철저히 보호됩니다. 위치 정보는 기념품 추천 용도로만 사용됩니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 아이템 3 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              @click="toggleFaq(3)"
+              class="w-full px-6 py-5 flex items-center justify-between"
+            >
+              <span class="text-lg font-semibold text-gray-900 text-left">어떤 국가를 지원하나요?</span>
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                :class="{ 'rotate-180': openFaq === 3 }"
+                style="color: #FF6640;"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 3 ? '200px' : '0px', opacity: openFaq === 3 ? 1 : 0 }">
+              <div class="px-6 pb-5">
+                <p class="text-gray-600">
+                  전 세계 100개 이상의 국가와 40,000개 이상의 도시 기념품 정보를 제공하고 있으며, 지속적으로 확대되고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 아이템 4 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              @click="toggleFaq(4)"
+              class="w-full px-6 py-5 flex items-center justify-between"
+            >
+              <span class="text-lg font-semibold text-gray-900 text-left">기념품 정보는 어떻게 수집되나요?</span>
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                :class="{ 'rotate-180': openFaq === 4 }"
+                style="color: #FF6640;"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 4 ? '200px' : '0px', opacity: openFaq === 4 ? 1 : 0 }">
+              <div class="px-6 pb-5">
+                <p class="text-gray-600">
+                  실제 여행자들이 공유한 정보와 현지 데이터를 기반으로 수집됩니다. 사용자 여러분도 여행 중 발견한 기념품을 공유하실 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 아이템 5 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              @click="toggleFaq(5)"
+              class="w-full px-6 py-5 flex items-center justify-between"
+            >
+              <span class="text-lg font-semibold text-gray-900 text-left">기념품 추천은 어떻게 받나요?</span>
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                :class="{ 'rotate-180': openFaq === 5 }"
+                style="color: #FF6640;"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 5 ? '200px' : '0px', opacity: openFaq === 5 ? 1 : 0 }">
+              <div class="px-6 pb-5">
+                <p class="text-gray-600">
+                  AI 기반 맞춤 추천은 회원가입 후 이용하실 수 있습니다. 온보딩 과정에서 선호하는 카테고리를 선택하시면, 취향에 맞는 기념품을 추천해드립니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 아이템 6 -->
+          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+            <button
+              @click="toggleFaq(6)"
+              class="w-full px-6 py-5 flex items-center justify-between"
+            >
+              <span class="text-lg font-semibold text-gray-900 text-left">여행 전에도 미리 기념품을 찾아볼 수 있나요?</span>
+              <svg
+                class="w-6 h-6 transition-transform duration-300"
+                :class="{ 'rotate-180': openFaq === 6 }"
+                style="color: #FF6640;"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 6 ? '200px' : '0px', opacity: openFaq === 6 ? 1 : 0 }">
+              <div class="px-6 pb-5">
+                <p class="text-gray-600">
+                  네, 가능합니다! 여행지를 검색하시면 해당 지역에 등록된 다양한 기념품 정보를 미리 확인하고 계획을 세우실 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 추가 문의 -->
+        <div class="mt-12 text-center p-8 bg-gray-50 rounded-2xl">
+          <h4 class="text-xl font-bold mb-2 text-gray-900">더 궁금한 점이 있으신가요?</h4>
+          <p class="text-gray-600 mb-4">언제든지 문의해주세요!</p>
+          <a
+            href="mailto:team.sou.zip@gmail.com"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all hover:shadow-lg"
+            style="background-color: #FF6640; color: white;"
+            @mouseover="(e) => e.target.style.backgroundColor = '#FF7F5C'"
+            @mouseout="(e) => e.target.style.backgroundColor = '#FF6640'"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <span>이메일 문의하기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
     <ScrollToTop />
   </div>
 </template>
@@ -310,6 +509,13 @@ useHead({
 // 스토어 링크
 const appStoreUrl = 'https://apps.apple.com/kr/app/%EC%88%98%EC%A7%91-sou-zip-%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89-%EA%B8%B0%EB%85%90%ED%92%88-%EC%B6%94%EC%B2%9C/id6757256797'
 const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.swyp.souzip&pcampaignid=web_share'
+
+// FAQ
+const openFaq = ref(null)
+
+const toggleFaq = (id) => {
+  openFaq.value = openFaq.value === id ? null : id
+}
 
 // 통계 숫자 애니메이션
 const statsSection = ref(null)
