@@ -109,7 +109,7 @@
           </p>
         </div>
         
-        <div ref="statsSection" class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div ref="statsSection" class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3" style="color: #FF6640;">
               {{ formatNumber(animatedCountries) }}+</div>
@@ -205,7 +205,7 @@
           <button
             v-show="showScrollTop"
             @click="scrollToTop"
-            class="ml-auto mb-4 md:mb-16 lg:mb-16 w-12 h-12 rounded-full shadow-lg transition-all transform flex items-center justify-center pointer-events-auto"
+            class="ml-auto mb-12 md:mb-16 lg:mb-20 w-12 h-12 rounded-full shadow-lg transition-all transform flex items-center justify-center pointer-events-auto"
             style="background-color: #FF6640; color: white;"
             @mouseover="(e) => e.target.style.backgroundColor = '#FF7F5C'"
             @mouseout="(e) => e.target.style.backgroundColor = '#FF6640'"

@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-50 border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <!-- 로고 및 소개 -->
         <div>
           <NuxtLink to="/" class="inline-block mb-4">
@@ -55,11 +55,23 @@
                 주요 기능
               </a>
             </li>
-            <!-- <li>
+            <li>
               <a href="/#download" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
                 앱 다운로드
               </a>
-            </li> -->
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 소개 -->
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-4">소개</h3>
+          <ul class="space-y-2">
+            <li>
+              <NuxtLink to="/press" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                미디어 소개
+              </NuxtLink>
+            </li>
           </ul>
         </div>
         

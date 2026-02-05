@@ -13,6 +13,9 @@
           <a href="/#features" class="text-gray-600 hover:text-gray-900 transition-colors">
             기능
           </a>
+          <NuxtLink to="/press" class="text-gray-600 hover:text-gray-900 transition-colors">
+            미디어 소개
+          </NuxtLink>
           <a href="/#download" class="text-gray-600 hover:text-gray-900 transition-colors">
             다운로드
           </a>
@@ -49,6 +52,13 @@
             >
               기능
             </a>
+            <NuxtLink
+              to="/press"
+              class="block text-gray-600 hover:text-gray-900 py-2"
+              @click="mobileMenuOpen = false"
+            >
+              미디어 소개
+            </NuxtLink>
             <a
               href="/#download"
               class="block text-gray-600 hover:text-gray-900 py-2"
