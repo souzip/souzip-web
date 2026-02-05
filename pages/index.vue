@@ -371,7 +371,7 @@
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 3 ? '200px' : '0px', opacity: openFaq === 3 ? 1 : 0 }">
               <div class="px-6 pb-5">
                 <p class="text-gray-600 dark:text-gray-300">
-                  전 세계 100개 이상의 국가와 40,000개 이상의 도시 기념품 정보를 제공하고 있으며, 지속적으로 확대되고 있습니다.
+                  전 세계 190개 이상의 국가와 40,000개 이상의 도시 기념품 정보를 제공하고 있으며, 지속적으로 확대되고 있습니다.
                 </p>
               </div>
             </div>
@@ -605,9 +605,9 @@ const animatedCountries = ref(0)
 const animatedCities = ref(0)
 const statsAnimated = ref(false)
 
-const targetUsers = 100
-const targetSouvenirs = 100
-const targetCountries = 100
+const targetUsers = 150
+const targetSouvenirs = 150
+const targetCountries = 190
 const targetCities = 40000
 
 const formatNumber = (num) => {
