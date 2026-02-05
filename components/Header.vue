@@ -1,6 +1,6 @@
   <template>
     <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-      <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <nav class="max-w-6xl mx-auto py-4 flex justify-between items-center">
         <NuxtLink to="/" class="hover:opacity-80 transition-opacity">
           <img
             src="../public/sou.zip.png"
@@ -13,12 +13,12 @@
           <a href="/#features" class="text-gray-600 hover:text-gray-900 transition-colors">
             기능
           </a>
-          <NuxtLink to="/press" class="text-gray-600 hover:text-gray-900 transition-colors">
-            미디어 소개
-          </NuxtLink>
           <a href="/#download" class="text-gray-600 hover:text-gray-900 transition-colors">
             다운로드
           </a>
+          <NuxtLink to="/press" class="text-gray-600 hover:text-gray-900 transition-colors">
+            미디어 소개
+          </NuxtLink>
         </div>
         
         <button
