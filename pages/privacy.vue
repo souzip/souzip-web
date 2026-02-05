@@ -71,7 +71,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             회원 탈퇴 시 30일 이후 파기
           </p>
-          <p class="text-gray-600 mb-2">
+          <p class="text-gray-600 dark:text-gray-300 mb-2">
             단, 다음 정보는 법령에 따라 일정기간 보관
           </p>
           <ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
