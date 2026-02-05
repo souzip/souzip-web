@@ -40,7 +40,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             2. 이용자는 정확하고 최신의 정보를 제공해야 하며, 허위 정보 제공으로 인한 불이익은 이용자에게 있습니다.
           </p>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-300">
             3. 이용자는 본인의 계정 정보를 안전하게 관리해야 하며, 타인에게 양도 또는 대여할 수 없습니다.
           </p>
         </section>
