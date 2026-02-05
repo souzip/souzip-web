@@ -145,15 +145,17 @@
         <div class="press-slider-wrapper mb-12">
           <div
             class="press-slider-container"
-            @mouseenter="pauseSlider"
-            @mouseleave="handleMouseLeave"
-            @mousedown="handleMouseDown"
-            @mousemove="handleMouseMove"
-            @mouseup="handleMouseUp"
+            @mousedown="onDragStart"
+            @mousemove="onDragMove"
+            @mouseup="onDragEnd"
+            @mouseleave="onDragEnd"
+            @touchstart="onDragStart"
+            @touchmove="onDragMove"
+            @touchend="onDragEnd"
           >
-            <div class="press-slider" :style="{ animationPlayState: sliderPaused ? 'paused' : 'running' }">
-              <!-- 여러 세트 복제 (끊김 없는 무한 슬라이드) -->
-              <template v-for="setIndex in 20" :key="`set-${setIndex}`">
+            <div class="press-slider" :style="{ transform: `translateX(${translateX}px)` }">
+              <!-- 무한 슬라이드를 위한 3세트 복제 -->
+              <template v-for="setIndex in 3" :key="`set-${setIndex}`">
               <a
                 v-for="item in pressItems"
                 :key="`${setIndex}-${item.id}`"
@@ -161,6 +163,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="press-card group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex-shrink-0 flex flex-col"
+                @click.prevent="onCardClick($event, item.url)"
               >
                 <div
                   class="relative h-48 overflow-hidden flex items-center justify-center"
@@ -529,33 +532,70 @@ const pressItems = ref([
   },
 ])
 
-// 슬라이더 제어
-const sliderPaused = ref(false)
+// 슬라이더 드래그 제어
 const sliderContainer = ref(null)
+const translateX = ref(0)
 const isDragging = ref(false)
 const startX = ref(0)
-const scrollLeft = ref(0)
-let scrollTimeout = null
+const currentX = ref(0)
+const animationId = ref(null)
+const velocity = ref(0)
 
-const pauseSlider = () => {
-  sliderPaused.value = true
+const CARD_WIDTH = 400
+const GAP = 24
+const MOBILE_CARD_WIDTH = 300
+const MOBILE_GAP = 16
+const SMALL_MOBILE_CARD_WIDTH = 280
+
+// 현재 화면 크기에 따른 카드 너비와 간격 계산
+const getCardDimensions = () => {
+  const width = window.innerWidth
+  if (width <= 480) {
+    return { cardWidth: SMALL_MOBILE_CARD_WIDTH, gap: MOBILE_GAP }
+  } else if (width <= 768) {
+    return { cardWidth: MOBILE_CARD_WIDTH, gap: MOBILE_GAP }
+  }
+  return { cardWidth: CARD_WIDTH, gap: GAP }
 }
 
-const resumeSlider = () => {
-  sliderPaused.value = false
+// 한 세트의 너비 계산 (카드 2개)
+const getSetWidth = () => {
+  const { cardWidth, gap } = getCardDimensions()
+  return (cardWidth + gap) * pressItems.value.length
 }
 
-const handleMouseDown = (e) => {
-  if (!sliderContainer.value) return
+// 자동 슬라이드 애니메이션
+const autoSlide = () => {
+  if (isDragging.value) return
+  
+  translateX.value -= 0.5 // 슬라이드 속도
+  
+  const setWidth = getSetWidth()
+  // 두 번째 세트의 70% 지점에 도달하면 리셋 (더 빠르게 다음 카드 표시)
+  if (translateX.value <= -setWidth * 1.7) {
+    translateX.value += setWidth
+  }
+  
+  animationId.value = requestAnimationFrame(autoSlide)
+}
+
+// 드래그 시작
+const onDragStart = (e) => {
   isDragging.value = true
-  startX.value = e.pageX - sliderContainer.value.offsetLeft
-  scrollLeft.value = sliderContainer.value.scrollLeft
-  sliderContainer.value.style.cursor = 'grabbing'
-  pauseSlider()
+  startX.value = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX
+  currentX.value = translateX.value
+  velocity.value = 0
+  
+  // 자동 슬라이드 중지
+  if (animationId.value) {
+    cancelAnimationFrame(animationId.value)
+  }
 }
 
-const handleMouseMove = (e) => {
-  if (!isDragging.value || !sliderContainer.value) return
+// 드래그 중
+const onDragMove = (e) => {
+  if (!isDragging.value) return
+  
   e.preventDefault()
   const x = e.pageX - sliderContainer.value.offsetLeft
   const walk = (x - startX.value) * 2
@@ -565,15 +605,29 @@ const handleMouseMove = (e) => {
   checkScrollPosition()
 }
 
-const handleMouseUp = () => {
-  if (!sliderContainer.value) return
-  isDragging.value = false
-  sliderContainer.value.style.cursor = 'grab'
+// 드래그 종료
+const onDragEnd = () => {
+  if (!isDragging.value) return
   
-  // 드래그가 끝난 후 위치 체크 및 조정
-  setTimeout(() => {
-    checkScrollPosition()
-  }, 50)
+  isDragging.value = false
+  
+  // 관성 적용
+  const momentum = velocity.value * 0.5
+  translateX.value += momentum
+  
+  // 경계 체크 및 무한 루프 처리 (끊김 없이)
+  const setWidth = getSetWidth()
+  // 오른쪽으로 너무 많이 드래그한 경우
+  if (translateX.value > 0) {
+    translateX.value -= setWidth
+  } 
+  // 왼쪽으로 너무 많이 드래그한 경우
+  else if (translateX.value <= -setWidth * 1.5) {
+    translateX.value += setWidth
+  }
+  
+  // 자동 슬라이드 재개
+  animationId.value = requestAnimationFrame(autoSlide)
 }
 
 const handleMouseLeave = () => {
@@ -617,6 +671,7 @@ const checkScrollPosition = () => {
       }
     }, 50)
   }
+  window.open(url, '_blank')
 }
 
 // FAQ
@@ -715,7 +770,10 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  // Cleanup은 필요없음 (슬라이더 컨테이너가 함께 제거됨)
+  // 애니메이션 정리
+  if (animationId.value) {
+    cancelAnimationFrame(animationId.value)
+  }
 })
 </script>
 
@@ -771,18 +829,10 @@ onUnmounted(() => {
 
 .press-slider-container {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  position: relative;
   cursor: grab;
   user-select: none;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-}
-
-.press-slider-container::-webkit-scrollbar {
-  display: none;
 }
 
 .press-slider-container:active {
@@ -792,35 +842,19 @@ onUnmounted(() => {
 .press-slider {
   display: inline-flex;
   gap: 1.5rem;
-  animation: slide-desktop 30s linear infinite;
   will-change: transform;
-}
-
-.press-slider-container:hover .press-slider {
-  animation-play-state: paused;
 }
 
 .press-card {
   width: 400px;
   min-width: 400px;
   flex-shrink: 0;
-}
-
-/* 데스크톱 애니메이션: 카드 2개 기준으로 한 세트 이동 */
-@keyframes slide-desktop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* (카드 너비 400px + gap 24px) * 2개 = 848px */
-    transform: translateX(-848px);
-  }
+  pointer-events: auto;
 }
 
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .press-slider {
-    animation: slide-mobile 20s linear infinite;
     gap: 1rem;
   }
 
