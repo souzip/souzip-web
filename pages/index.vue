@@ -131,7 +131,7 @@
     </section>
     
     <!-- 미디어 소개 섹션 -->
-    <section class="py-24 px-4 bg-white dark:bg-gray-900">
+    <section class="py-24 px-4 bg-white dark:bg-gray-900 overflow-hidden">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h3 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
@@ -142,72 +142,62 @@
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-          <!-- 인스타그램 소개 -->
-          <a
-            href="https://www.instagram.com/p/DUH9VMmAV3b/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden"
+        <div class="press-slider-wrapper mb-12">
+          <div 
+            class="press-slider-container"
+            @mouseenter="pauseSlider"
+            @mouseleave="handleMouseLeave"
+            @mousedown="handleMouseDown"
+            @mousemove="handleMouseMove"
+            @mouseup="handleMouseUp"
           >
-            <div class="relative h-48 bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 overflow-hidden flex items-center justify-center">
-              <svg class="w-20 h-20 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-semibold">
-                Instagram
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">2026.01.31</div>
-              <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
-                너 아직도 여행가서 냉장고 자석만 사오니? ✈️
-              </h4>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                '수집'은 해외여행 중 내 위치와 동선에 맞춰 기념품을 발견하고 그 기념품을 통해 여행의 기억을 남길 수 있도록 돕는 서비스입니다.
-              </p>
-              <div class="flex items-center font-medium text-sm" style="color: #FF6640;">
-                자세히 보기
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-          <!-- 블로그 소개 -->
-          <a
-            href="https://uibowl.io/self-contents/cml7lmazi0006ib04bk1rcppz"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden"
-          >
-            <div class="relative h-48 bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden flex items-center justify-center">
-              <img
-                src="https://boldy.s3.ap-northeast-2.amazonaws.com/article/d25d853b-dbec-47d5-99c4-54b61234bb21/400x400bb-75.webp"
-                alt="해외 여행 기념품 앱"
-                class="w-full h-full object-cover"
-              />
-              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-semibold">
-                Blog
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">2026.02.04</div>
-              <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
-                해외 여행 기념품을 정리해주는 앱 🗂️
-              </h4>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                수집은 해외여행에서 누구나 한 번쯤 겪는 고민, "이 나라에 왔으면 뭘 사야 하지?"라는 질문에서 출발한 서비스입니다.
-              </p>
-              <div class="flex items-center font-medium text-sm" style="color: #FF6640;">
-                자세히 보기
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </div>
-            </div>
-          </a>
+            <div class="press-slider" :style="{ animationPlayState: sliderPaused ? 'paused' : 'running' }">
+              <!-- 여러 세트 복제 (끊김 없는 무한 슬라이드) -->
+              <template v-for="setIndex in 8" :key="`set-${setIndex}`">
+              <a
+                v-for="item in pressItems"
+                :key="`${setIndex}-${item.id}`"
+                :href="item.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="press-card group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex-shrink-0"
+              >
+                <div 
+                  class="relative h-48 overflow-hidden flex items-center justify-center"
+                  :class="item.gradient"
+                >
+                  <svg v-if="item.platform === 'Instagram'" class="w-20 h-20 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <img
+                    v-else-if="item.thumbnail"
+                    :src="item.thumbnail"
+                    :alt="item.title"
+                    class="w-full h-full object-cover"
+                  />
+                  <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-semibold">
+                    {{ item.platform }}
+                  </div>
+                </div>
+                <div class="p-6">
+                  <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">{{ item.date }}</div>
+                  <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors line-clamp-2" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
+                    {{ item.title }}
+                  </h4>
+                  <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
+                    {{ item.description }}
+                  </p>
+                  <div class="flex items-center font-medium text-sm" style="color: #FF6640;">
+                    자세히 보기
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </template>
+          </div>
+          </div>
         </div>
         
         <div class="text-center">
@@ -510,6 +500,100 @@ useHead({
 const appStoreUrl = 'https://apps.apple.com/kr/app/%EC%88%98%EC%A7%91-sou-zip-%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89-%EA%B8%B0%EB%85%90%ED%92%88-%EC%B6%94%EC%B2%9C/id6757256797'
 const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.swyp.souzip&pcampaignid=web_share'
 
+// 미디어 소개 데이터
+const pressItems = ref([
+  {
+    id: 1,
+    platform: 'Instagram',
+    title: '너 아직도 여행가서 냉장고 자석만 사오니? ✈️',
+    description: '\'수집\'은 해외여행 중 내 위치와 동선에 맞춰 기념품을 발견하고 그 기념품을 통해 여행의 기억을 남길 수 있도록 돕는 서비스입니다.',
+    date: '2026.01.31',
+    url: 'https://www.instagram.com/p/DUH9VMmAV3b/',
+    thumbnail: null,
+    gradient: 'bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100'
+  },
+  {
+    id: 2,
+    platform: 'Blog',
+    title: '해외 여행 기념품을 정리해주는 앱 🗂️',
+    description: '수집은 해외여행에서 누구나 한 번쯤 겪는 고민, "이 나라에 왔으면 뭘 사야 하지?"라는 질문에서 출발한 서비스입니다.',
+    date: '2026.02.04',
+    url: 'https://uibowl.io/self-contents/cml7lmazi0006ib04bk1rcppz',
+    thumbnail: 'https://boldy.s3.ap-northeast-2.amazonaws.com/article/d25d853b-dbec-47d5-99c4-54b61234bb21/400x400bb-75.webp',
+    gradient: 'bg-gradient-to-br from-orange-50 to-orange-100'
+  },
+])
+
+// 슬라이더 제어
+const sliderPaused = ref(false)
+const sliderContainer = ref(null)
+const isDragging = ref(false)
+const startX = ref(0)
+const scrollLeft = ref(0)
+
+const pauseSlider = () => {
+  sliderPaused.value = true
+}
+
+const resumeSlider = () => {
+  sliderPaused.value = false
+}
+
+const handleMouseDown = (e) => {
+  if (!sliderContainer.value) return
+  isDragging.value = true
+  startX.value = e.pageX - sliderContainer.value.offsetLeft
+  scrollLeft.value = sliderContainer.value.scrollLeft
+  sliderContainer.value.style.cursor = 'grabbing'
+}
+
+const handleMouseMove = (e) => {
+  if (!isDragging.value || !sliderContainer.value) return
+  e.preventDefault()
+  const x = e.pageX - sliderContainer.value.offsetLeft
+  const walk = (x - startX.value) * 2
+  sliderContainer.value.scrollLeft = scrollLeft.value - walk
+  
+  // 무한 스크롤 효과를 위한 위치 체크
+  checkScrollPosition()
+}
+
+const handleMouseUp = () => {
+  if (!sliderContainer.value) return
+  isDragging.value = false
+  sliderContainer.value.style.cursor = 'grab'
+}
+
+const handleMouseLeave = () => {
+  if (isDragging.value && sliderContainer.value) {
+    sliderContainer.value.style.cursor = 'grab'
+  }
+  isDragging.value = false
+  resumeSlider()
+}
+
+const checkScrollPosition = () => {
+  if (!sliderContainer.value) return
+  
+  const scrollWidth = sliderContainer.value.scrollWidth
+  const clientWidth = sliderContainer.value.clientWidth
+  const scrollLeft = sliderContainer.value.scrollLeft
+  
+  // 한 세트의 너비 (카드 2개 + gap)
+  const cardWidth = window.innerWidth <= 480 ? 280 : window.innerWidth <= 768 ? 300 : 400
+  const gap = window.innerWidth <= 768 ? 16 : 24
+  const setWidth = (cardWidth + gap) * 2
+  
+  // 끝에 가까워지면 처음으로 되돌림
+  if (scrollLeft >= setWidth * 4) {
+    sliderContainer.value.scrollLeft = scrollLeft - setWidth * 4
+  }
+  // 처음으로 되돌아가면 중간으로 이동
+  else if (scrollLeft <= 0) {
+    sliderContainer.value.scrollLeft = setWidth * 4
+  }
+}
+
 // FAQ
 const openFaq = ref(null)
 
@@ -589,6 +673,26 @@ onMounted(() => {
   if (statsSection.value) {
     observer.observe(statsSection.value)
   }
+  
+  // Get slider container element
+  sliderContainer.value = document.querySelector('.press-slider-container')
+  
+  // 스크롤 이벤트 리스너 추가
+  if (sliderContainer.value) {
+    // 초기 스크롤 위치를 중간으로 설정
+    const cardWidth = window.innerWidth <= 480 ? 280 : window.innerWidth <= 768 ? 300 : 400
+    const gap = window.innerWidth <= 768 ? 16 : 24
+    const setWidth = (cardWidth + gap) * 2
+    sliderContainer.value.scrollLeft = setWidth * 4
+    
+    sliderContainer.value.addEventListener('scroll', checkScrollPosition)
+  }
+})
+
+onUnmounted(() => {
+  if (sliderContainer.value) {
+    sliderContainer.value.removeEventListener('scroll', checkScrollPosition)
+  }
 })
 </script>
 
@@ -634,6 +738,100 @@ onMounted(() => {
 .character-walk-right:hover,
 .character-walk-left:hover {
   animation-play-state: paused;
+}
+
+/* 무한 슬라이더 스타일 */
+.press-slider-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.press-slider-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.press-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.press-slider-container:active {
+  cursor: grabbing;
+}
+
+.press-slider {
+  display: inline-flex;
+  gap: 1.5rem;
+  animation: slide-desktop 30s linear infinite;
+  will-change: transform;
+}
+
+.press-slider-container:hover .press-slider {
+  animation-play-state: paused;
+}
+
+.press-card {
+  width: 400px;
+  min-width: 400px;
+  flex-shrink: 0;
+}
+
+/* 데스크톱 애니메이션: 카드 2개 기준으로 한 세트 이동 */
+@keyframes slide-desktop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* (카드 너비 400px + gap 24px) * 2개 = 848px */
+    transform: translateX(-848px);
+  }
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .press-slider {
+    animation: slide-mobile 20s linear infinite;
+    gap: 1rem;
+  }
+  
+  .press-card {
+    width: 300px;
+    min-width: 300px;
+  }
+  
+  /* 모바일 애니메이션: 카드 2개 기준으로 한 세트 이동 */
+  @keyframes slide-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* (카드 너비 300px + gap 16px) * 2개 = 632px */
+      transform: translateX(-632px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .press-card {
+    width: 280px;
+    min-width: 280px;
+  }
+  
+  @keyframes slide-mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* (카드 너비 280px + gap 16px) * 2개 = 592px */
+      transform: translateX(-592px);
+    }
+  }
 }
 
 .line-clamp-2 {
