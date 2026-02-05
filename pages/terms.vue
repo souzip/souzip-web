@@ -1,20 +1,20 @@
 <template>
-  <div class="min-h-screen bg-white py-20 px-4">
+  <div class="min-h-screen bg-white dark:bg-gray-900 py-20 px-4">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl font-bold mb-8">서비스 이용약관</h1>
+      <h1 class="text-4xl font-bold mb-8 dark:text-white">서비스 이용약관</h1>
       
       <div class="prose prose-lg max-w-none">
         <section class="mb-8">
-          <h2 class="text-2xl font-bold mb-4">제1조 (목적)</h2>
-          <p class="text-gray-600">
+          <h2 class="text-2xl font-bold mb-4 dark:text-white">제1조 (목적)</h2>
+          <p class="text-gray-600 dark:text-gray-300">
             본 약관은 "수집"(이하 "회사")이 제공하는 모바일 애플리케이션 및 관련 서비스(이하 "서비스") 이용과 관련하여 회사와 이용자 간의 권리·의무 및 책임 사항 등을 규정함을 목적으로 합니다.
           </p>
         </section>
         
         <section class="mb-8">
-          <h2 class="text-2xl font-bold mb-4">제2조 (정의)</h2>
-          <p class="text-gray-600 mb-4">본 약관에서 사용하는 용어의 정의는 다음과 같습니다:</p>
-          <ul class="list-disc pl-6 text-gray-600 space-y-2">
+          <h2 class="text-2xl font-bold mb-4 dark:text-white">제2조 (정의)</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">본 약관에서 사용하는 용어의 정의는 다음과 같습니다:</p>
+          <ul class="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
             <li>"서비스"란 이용자가 여행 중 구입한 기념품 조회, 기념품 후기 작성, 사진 업로드, 개인화 추천 등을 이용할 수 있는 회사의 모든 서비스를 의미합니다.</li>
             <li>"이용자"란 본 약관에 동의하고 서비스를 사용하는 회원을 말합니다.</li>
             <li>"콘텐츠"란 이용자가 서비스 내에 게시하거나 업로드한 텍스트, 사진, 리뷰, 기타 정보를 말합니다.</li>
@@ -23,21 +23,21 @@
         </section>
         
         <section class="mb-8">
-          <h2 class="text-2xl font-bold mb-4">제3조 (약관의 적용 및 변경)</h2>
-          <p class="text-gray-600 mb-4">
+          <h2 class="text-2xl font-bold mb-4 dark:text-white">제3조 (약관의 적용 및 변경)</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
             1. 본 약관은 회사가 앱 내 또는 회사가 제공하는 화면에 게시하여 공지하며, 이용자가 서비스에 가입 또는 이용할 때 약관에 동의함으로써 효력이 발생합니다.
           </p>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-300">
             2. 회사는 관계 법령을 위배하지 않는 범위에서 약관을 변경할 수 있으며, 변경 시 사전 고지합니다.
           </p>
         </section>
         
         <section class="mb-8">
-          <h2 class="text-2xl font-bold mb-4">제4조 (회원가입 및 계정)</h2>
-          <p class="text-gray-600 mb-4">
+          <h2 class="text-2xl font-bold mb-4 dark:text-white">제4조 (회원가입 및 계정)</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
             1. 회원가입은 카카오, Google, Apple 등 외부 시스템을 통한 소셜 로그인 방식으로 진행됩니다.
           </p>
-          <p class="text-gray-600 mb-4">
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
             2. 이용자는 정확하고 최신의 정보를 제공해야 하며, 허위 정보 제공으로 인한 불이익은 이용자에게 있습니다.
           </p>
           <p class="text-gray-600">

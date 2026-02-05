@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-50 border-t border-gray-200">
+  <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <!-- 로고 및 소개 -->
@@ -11,7 +11,7 @@
               class="h-10 w-auto"
             />
           </NuxtLink>
-          <p class="text-gray-600 text-sm mb-4">
+          <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
             여행의 순간을 담는<br>
             특별한 기념품 추천 서비스
           </p>
@@ -36,7 +36,7 @@
               href="https://www.threads.com/@sou.zip.app" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-700 transition-colors"
+              class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
               aria-label="Threads"
             >
               <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -48,20 +48,20 @@
         
         <!-- 서비스 링크 -->
         <div>
-          <h3 class="font-semibold text-gray-900 mb-4">서비스</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">서비스</h3>
           <ul class="space-y-2">
             <li>
-              <a href="/#features" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+              <a href="/#features" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                 주요 기능
               </a>
             </li>
             <li>
-              <a href="/#download" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+              <a href="/#download" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                 앱 다운로드
               </a>
             </li>
             <li>
-              <a href="/#faq" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+              <a href="/#faq" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                 자주 묻는 질문
               </a>
             </li>
@@ -70,10 +70,10 @@
         
         <!-- 소개 -->
         <div>
-          <h3 class="font-semibold text-gray-900 mb-4">소개</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">소개</h3>
           <ul class="space-y-2">
             <li>
-              <NuxtLink to="/press" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+              <NuxtLink to="/press" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                 미디어 소개
               </NuxtLink>
             </li>
@@ -82,27 +82,27 @@
         
         <!-- 법적 고지 -->
         <div>
-          <h3 class="font-semibold text-gray-900 mb-4">이용약관</h3>
+          <h3 class="font-semibold text-gray-900 dark:text-white mb-4">이용약관</h3>
           <div class="flex flex-wrap gap-x-8 gap-y-4 items-end justify-between">
             <!-- 약관 리스트 -->
             <ul class="space-y-2 flex-shrink-0">
               <li>
-                <NuxtLink to="/terms" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <NuxtLink to="/terms" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                   서비스 이용약관
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/privacy" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <NuxtLink to="/privacy" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                   개인정보처리방침
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/location-terms" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <NuxtLink to="/location-terms" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                   위치기반서비스 이용약관
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/marketing-terms" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+                <NuxtLink to="/marketing-terms" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors">
                   마케팅 정보 수신 동의
                 </NuxtLink>
               </li>
@@ -128,7 +128,7 @@
                 href="https://www.threads.com/@sou.zip.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-gray-700 transition-colors"
+                class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-700 flex items-center justify-center hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
                 aria-label="Threads"
               >
                 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -141,15 +141,15 @@
       </div>
       
       <!-- 구분선 -->
-      <div class="border-t border-gray-200 pt-8">
+      <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <!-- 저작권 정보 -->
-          <p class="text-gray-500 text-sm">
+          <p class="text-gray-500 dark:text-gray-400 text-sm">
             © 2026 sou.zip. All rights reserved.
           </p>
           
           <!-- 연락처 정보 -->
-          <div class="flex items-center gap-4 text-sm text-gray-500">
+          <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
             <span>문의: team.sou.zip@gmail.com</span>
           </div>
         </div>

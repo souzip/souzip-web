@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen bg-white dark:bg-gray-900">
     <section class="relative min-h-[95vh] flex items-center justify-center px-4 overflow-hidden">
       <div class="absolute inset-0 -z-10">
         <div class="absolute top-20 right-20 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-40"></div>
@@ -28,18 +28,18 @@
       
       <div class="max-w-6xl mx-auto text-center">
         <div class="mb-8">
-          <h1 class="text-3xl md:text-6xl font-bold tracking-tight text-gray-900">
+          <h1 class="text-3xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
             여행 기념품 정보는 <span style="color: #FF6640;">수집</span>에서!
           </h1>
         </div>
         
-        <p class="text-1xl md:text-4xl text-gray-600 max-w-2xl mx-auto">
+        <p class="text-1xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           위치 기반 여행 기념품 모음집, <span style="color: #FF6640;" class="font-semibold">sou.zip!</span>
         </p>
       </div>
       
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div class="flex flex-col items-center text-gray-400 animate-bounce">
+        <div class="flex flex-col items-center text-gray-400 dark:text-gray-500 animate-bounce">
           <span class="text-sm">Scroll</span>
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -48,48 +48,48 @@
       </div>
     </section>
     
-    <section id="features" class="py-24 px-4 bg-gray-50">
+    <section id="features" class="py-24 px-4 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           여행이 끝나도<br />
           <span style="color: #FF6640;">추억은 계속됩니다</span>
         </h3>
         
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-3xl transition-shadow">
-            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+          <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl transition-shadow">
+            <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
               <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
               </svg>
             </div>
-            <h4 class="text-xl font-bold mb-3">기념품 정보</h4>
-            <p class="text-gray-600">
+            <h4 class="text-xl font-bold mb-3 dark:text-white">기념품 정보</h4>
+            <p class="text-gray-600 dark:text-gray-300">
               실제로 다녀와본 사람들이<br />
               알려주는 특별한 기념품 정보
             </p>
           </div>
           
-          <div class="bg-white p-8 rounded-3xl transition-shadow">
-            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+          <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl transition-shadow">
+            <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
               <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
               </svg>
             </div>
-            <h4 class="text-xl font-bold mb-3">기념품 추천</h4>
-            <p class="text-gray-600">
+            <h4 class="text-xl font-bold mb-3 dark:text-white">기념품 추천</h4>
+            <p class="text-gray-600 dark:text-gray-300">
               여행지와 취향에 맞는 <br />
               딱 맞는 기념품을 찾아드려요
             </p>
           </div>
           
-          <div class="bg-white p-8 rounded-3xl transition-shadow">
-            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+          <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl transition-shadow">
+            <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
               <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
               </svg>
             </div>
-            <h4 class="text-xl font-bold mb-3">기념품 컬렉션</h4>
-            <p class="text-gray-600">
+            <h4 class="text-xl font-bold mb-3 dark:text-white">기념품 컬렉션</h4>
+            <p class="text-gray-600 dark:text-gray-300">
               내가 모은 기념품을<br />
               한 번에 모아 보세요
             </p>
@@ -98,13 +98,13 @@
       </div>
     </section>
     
-    <section class="py-24 px-4 bg-white">
+    <section class="py-24 px-4 bg-white dark:bg-gray-900">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
             지금까지 <span style="color: #FF6640;">sou.zip</span>과 함께
           </h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-300">
             전 세계 여행자들이 함께 만들어가는 기념품 이야기
           </p>
         </div>
@@ -112,32 +112,32 @@
         <div ref="statsSection" class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedCountries) }}<span style="position: relative; top: -0.3rem;">+</span></div>
-            <div class="text-gray-700 font-semibold text-base md:text-lg">국가</div>
+            <div class="text-gray-700 dark:text-gray-300 font-semibold text-base md:text-lg">국가</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedCities) }}<span style="position: relative; top: -0.3rem;">+</span></div>
-            <div class="text-gray-700 font-semibold text-base md:text-lg">도시</div>
+            <div class="text-gray-700 dark:text-gray-300 font-semibold text-base md:text-lg">도시</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedSouvenirs) }}<span style="position: relative; top: -0.3rem;">+</span></div>
-            <div class="text-gray-700 font-semibold text-base md:text-lg">기념품 정보</div>
+            <div class="text-gray-700 dark:text-gray-300 font-semibold text-base md:text-lg">기념품 정보</div>
           </div>
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedUsers) }}<span style="position: relative; top: -0.3rem;">+</span></div>
-            <div class="text-gray-700 font-semibold text-base md:text-lg">활성 사용자</div>
+            <div class="text-gray-700 dark:text-gray-300 font-semibold text-base md:text-lg">활성 사용자</div>
           </div>
         </div>
       </div>
     </section>
     
     <!-- 미디어 소개 섹션 -->
-    <section class="py-24 px-4 bg-white">
+    <section class="py-24 px-4 bg-white dark:bg-gray-900">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
-          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
             미디어에 소개된 <span style="color: #FF6640;">sou.zip</span>
           </h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-300">
             다양한 미디어에서 주목하는 새로운 여행 경험
           </p>
         </div>
@@ -148,7 +148,7 @@
             href="https://www.instagram.com/p/DUH9VMmAV3b/"
             target="_blank"
             rel="noopener noreferrer"
-            class="group bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-orange-200"
+            class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden"
           >
             <div class="relative h-48 bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 overflow-hidden flex items-center justify-center">
               <svg class="w-20 h-20 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
@@ -159,11 +159,11 @@
               </div>
             </div>
             <div class="p-6">
-              <div class="text-sm text-gray-500 mb-2">2026.01.31</div>
-              <h4 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-orange-600 transition-colors">
+              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">2026.01.31</div>
+              <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
                 너 아직도 여행가서 냉장고 자석만 사오니? ✈️
               </h4>
-              <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 '수집'은 해외여행 중 내 위치와 동선에 맞춰 기념품을 발견하고 그 기념품을 통해 여행의 기억을 남길 수 있도록 돕는 서비스입니다.
               </p>
               <div class="flex items-center font-medium text-sm" style="color: #FF6640;">
@@ -180,7 +180,7 @@
             href="https://uibowl.io/self-contents/cml7lmazi0006ib04bk1rcppz"
             target="_blank"
             rel="noopener noreferrer"
-            class="group bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-orange-200"
+            class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden"
           >
             <div class="relative h-48 bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden flex items-center justify-center">
               <img
@@ -193,16 +193,16 @@
               </div>
             </div>
             <div class="p-6">
-              <div class="text-sm text-gray-500 mb-2">2026.02.04</div>
-              <h4 class="text-xl font-bold mb-2 text-gray-900 group-hover:text-orange-600 transition-colors">
+              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">2026.02.04</div>
+              <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors" style="--hover-color: #FF6640;" onmouseover="this.style.color='var(--hover-color)'" onmouseout="this.style.color=''">
                 해외 여행 기념품을 정리해주는 앱 🗂️
               </h4>
-              <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 수집은 해외여행에서 누구나 한 번쯤 겪는 고민, "이 나라에 왔으면 뭘 사야 하지?"라는 질문에서 출발한 서비스입니다.
               </p>
               <div class="flex items-center font-medium text-sm" style="color: #FF6640;">
                 자세히 보기
-                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </div>
@@ -227,13 +227,13 @@
       </div>
     </section>
     
-    <section id="download" class="py-24 px-4 bg-gray-50">
+    <section id="download" class="py-24 px-4 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
-          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
             지금 바로 <span style="color: #FF6640;">다운로드</span>하세요
           </h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-300">
             여행의 순간을 특별하게 만들어줄 sou.zip을 만나보세요
           </p>
         </div>
@@ -245,7 +245,7 @@
               :href="appStoreUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-4 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl"
+              class="flex items-center gap-4 px-8 py-4 bg-black text-white rounded-xl shadow-lg"
             >
               <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
@@ -255,7 +255,7 @@
                 <div class="text-xl font-semibold">App Store</div>
               </div>
             </a>
-            <div class="bg-white p-4 rounded-2xl shadow-md w-full flex justify-center">
+            <div class="bg-white dark:bg-gray-700 p-4 rounded-2xl shadow-md w-full flex justify-center">
               <img
                 :src="appStoreQR"
                 alt="App Store QR Code"
@@ -270,7 +270,7 @@
               :href="playStoreUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-4 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl"
+              class="flex items-center gap-4 px-8 py-4 bg-black text-white rounded-xl shadow-lg"
             >
               <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
@@ -280,7 +280,7 @@
                 <div class="text-xl font-semibold">Google Play</div>
               </div>
             </a>
-            <div class="bg-white p-4 rounded-2xl shadow-md w-full flex justify-center">
+            <div class="bg-white dark:bg-gray-700 p-4 rounded-2xl shadow-md w-full flex justify-center">
               <img
                 :src="playStoreQR"
                 alt="Google Play QR Code"
@@ -293,25 +293,25 @@
     </section>
     
     <!-- FAQ 섹션 -->
-    <section id="faq" class="py-24 px-4 bg-white">
+    <section id="faq" class="py-24 px-4 bg-white dark:bg-gray-900">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16">
-          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
             자주 묻는 <span style="color: #FF6640;">질문</span>
           </h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-300">
             sou.zip에 대해 궁금한 점이 있으신가요?
           </p>
         </div>
         
         <div class="space-y-4">
           <!-- FAQ 아이템 1 -->
-          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
             <button
               @click="toggleFaq(1)"
               class="w-full px-6 py-5 flex items-center justify-between"
             >
-              <span class="text-lg font-semibold text-gray-900 text-left">회원가입이 필요한가요?</span>
+              <span class="text-lg font-semibold text-gray-900 dark:text-white text-left">회원가입이 필요한가요?</span>
               <svg
                 class="w-6 h-6 transition-transform duration-300"
                 :class="{ 'rotate-180': openFaq === 1 }"
@@ -325,10 +325,10 @@
             </button>
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 1 ? '300px' : '0px', opacity: openFaq === 1 ? 1 : 0 }">
               <div class="px-6 pb-5">
-                <p class="text-gray-600 leading-relaxed">
-                  <strong class="text-gray-900">안드로이드:</strong> 둘러보기 기능으로 회원가입 없이 일부 기능을 사용할 수 있습니다.<br>
-                  <strong class="text-gray-900">iOS:</strong> 회원가입이 필요합니다.<br><br>
-                  소셜 로그인만 지원하며, <strong class="text-gray-900">카카오, 구글, 애플</strong>로 간편하게 가입하실 수 있습니다. (안드로이드는 애플 로그인 미지원)<br>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <strong class="text-gray-900 dark:text-white">안드로이드:</strong> 둘러보기 기능으로 회원가입 없이 일부 기능을 사용할 수 있습니다.<br>
+                  <strong class="text-gray-900 dark:text-white">iOS:</strong> 회원가입이 필요합니다.<br><br>
+                  소셜 로그인만 지원하며, <strong class="text-gray-900 dark:text-white">카카오, 구글, 애플</strong>로 간편하게 가입하실 수 있습니다. (안드로이드는 애플 로그인 미지원)<br>
                   기념품 저장, 여행 계획 등 모든 기능을 이용하시려면 로그인이 필요합니다.
                 </p>
               </div>
@@ -336,12 +336,12 @@
           </div>
 
           <!-- FAQ 아이템 2 -->
-          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
             <button
               @click="toggleFaq(2)"
               class="w-full px-6 py-5 flex items-center justify-between"
             >
-              <span class="text-lg font-semibold text-gray-900 text-left">내 정보는 안전하게 보호되나요?</span>
+              <span class="text-lg font-semibold text-gray-900 dark:text-white text-left">내 정보는 안전하게 보호되나요?</span>
               <svg
                 class="w-6 h-6 transition-transform duration-300"
                 :class="{ 'rotate-180': openFaq === 2 }"
@@ -355,7 +355,7 @@
             </button>
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 2 ? '200px' : '0px', opacity: openFaq === 2 ? 1 : 0 }">
               <div class="px-6 pb-5">
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-300">
                   네, 모든 개인정보는 암호화되어 안전하게 저장되며, 관련 법령에 따라 철저히 보호됩니다. 위치 정보는 기념품 추천 용도로만 사용됩니다.
                 </p>
               </div>
@@ -363,12 +363,12 @@
           </div>
 
           <!-- FAQ 아이템 3 -->
-          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
             <button
               @click="toggleFaq(3)"
               class="w-full px-6 py-5 flex items-center justify-between"
             >
-              <span class="text-lg font-semibold text-gray-900 text-left">어떤 국가를 지원하나요?</span>
+              <span class="text-lg font-semibold text-gray-900 dark:text-white text-left">어떤 국가를 지원하나요?</span>
               <svg
                 class="w-6 h-6 transition-transform duration-300"
                 :class="{ 'rotate-180': openFaq === 3 }"
@@ -382,7 +382,7 @@
             </button>
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 3 ? '200px' : '0px', opacity: openFaq === 3 ? 1 : 0 }">
               <div class="px-6 pb-5">
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-300">
                   전 세계 100개 이상의 국가와 40,000개 이상의 도시 기념품 정보를 제공하고 있으며, 지속적으로 확대되고 있습니다.
                 </p>
               </div>
@@ -390,12 +390,12 @@
           </div>
 
           <!-- FAQ 아이템 4 -->
-          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
             <button
               @click="toggleFaq(4)"
               class="w-full px-6 py-5 flex items-center justify-between"
             >
-              <span class="text-lg font-semibold text-gray-900 text-left">기념품 정보는 어떻게 수집되나요?</span>
+              <span class="text-lg font-semibold text-gray-900 dark:text-white text-left">기념품 정보는 어떻게 수집되나요?</span>
               <svg
                 class="w-6 h-6 transition-transform duration-300"
                 :class="{ 'rotate-180': openFaq === 4 }"
@@ -409,7 +409,7 @@
             </button>
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 4 ? '200px' : '0px', opacity: openFaq === 4 ? 1 : 0 }">
               <div class="px-6 pb-5">
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-300">
                   실제 여행자들이 공유한 정보와 현지 데이터를 기반으로 수집됩니다. 사용자 여러분도 여행 중 발견한 기념품을 공유하실 수 있습니다.
                 </p>
               </div>
@@ -417,12 +417,12 @@
           </div>
 
           <!-- FAQ 아이템 5 -->
-          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
             <button
               @click="toggleFaq(5)"
               class="w-full px-6 py-5 flex items-center justify-between"
             >
-              <span class="text-lg font-semibold text-gray-900 text-left">기념품 추천은 어떻게 받나요?</span>
+              <span class="text-lg font-semibold text-gray-900 dark:text-white text-left">기념품 추천은 어떻게 받나요?</span>
               <svg
                 class="w-6 h-6 transition-transform duration-300"
                 :class="{ 'rotate-180': openFaq === 5 }"
@@ -436,7 +436,7 @@
             </button>
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 5 ? '200px' : '0px', opacity: openFaq === 5 ? 1 : 0 }">
               <div class="px-6 pb-5">
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-300">
                   AI 기반 맞춤 추천은 회원가입 후 이용하실 수 있습니다. 온보딩 과정에서 선호하는 카테고리를 선택하시면, 취향에 맞는 기념품을 추천해드립니다.
                 </p>
               </div>
@@ -444,12 +444,12 @@
           </div>
 
           <!-- FAQ 아이템 6 -->
-          <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
             <button
               @click="toggleFaq(6)"
               class="w-full px-6 py-5 flex items-center justify-between"
             >
-              <span class="text-lg font-semibold text-gray-900 text-left">여행 전에도 미리 기념품을 찾아볼 수 있나요?</span>
+              <span class="text-lg font-semibold text-gray-900 dark:text-white text-left">여행 전에도 미리 기념품을 찾아볼 수 있나요?</span>
               <svg
                 class="w-6 h-6 transition-transform duration-300"
                 :class="{ 'rotate-180': openFaq === 6 }"
@@ -463,7 +463,7 @@
             </button>
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 6 ? '200px' : '0px', opacity: openFaq === 6 ? 1 : 0 }">
               <div class="px-6 pb-5">
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-300">
                   네, 가능합니다! 여행지를 검색하시면 해당 지역에 등록된 다양한 기념품 정보를 미리 확인하고 계획을 세우실 수 있습니다.
                 </p>
               </div>
@@ -472,9 +472,9 @@
         </div>
         
         <!-- 추가 문의 -->
-        <div class="mt-12 text-center p-8 bg-gray-50 rounded-2xl">
-          <h4 class="text-xl font-bold mb-2 text-gray-900">더 궁금한 점이 있으신가요?</h4>
-          <p class="text-gray-600 mb-4">언제든지 문의해주세요!</p>
+        <div class="mt-12 text-center p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl">
+          <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">더 궁금한 점이 있으신가요?</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">언제든지 문의해주세요!</p>
           <a
             href="mailto:team.sou.zip@gmail.com"
             class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all hover:shadow-lg"

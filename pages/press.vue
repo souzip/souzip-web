@@ -1,12 +1,12 @@
 <template>
-<div class="min-h-screen bg-white">
+<div class="min-h-screen bg-white dark:bg-gray-900">
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-orange-50 to-white">
+    <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-orange-50 to-white dark:from-gray-800 dark:to-gray-900">
       <div class="max-w-6xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
           <span style="color: #FF6640;">미디어 소개</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           sou.zip이 소개된 다양한 미디어와 플랫폼을 확인해보세요
         </p>
       </div>
@@ -22,7 +22,7 @@
             :href="item.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+            class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex flex-col h-full"
           >
             <!-- Thumbnail -->
             <div 
@@ -72,11 +72,11 @@
 
             <!-- Content -->
             <div class="p-6 flex flex-col flex-1">
-              <div class="text-sm text-gray-500 mb-2">{{ item.date }}</div>
-              <h3 class="text-xl font-bold mb-2 text-gray-900 transition-colors line-clamp-2 h-14">
+              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">{{ item.date }}</div>
+              <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white transition-colors line-clamp-2 h-14" style="--hover-color: #FF6640;" @mouseover="$event.target.style.color='var(--hover-color)'" @mouseout="$event.target.style.color=''">
                 {{ item.title }}
               </h3>
-              <p class="text-gray-600 text-sm line-clamp-3 mb-4">
+              <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 mb-4">
                 {{ item.description }}
               </p>
               <div class="flex items-center font-medium text-sm mt-auto" style="color: #FF6640;">
@@ -96,8 +96,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">곧 업데이트 예정입니다</h3>
-          <p class="text-gray-600">sou.zip의 미디어 소개를 준비중입니다</p>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">곧 업데이트 예정입니다</h3>
+          <p class="text-gray-600 dark:text-gray-300">sou.zip의 미디어 소개를 준비중입니다</p>
         </div>
       </div>
     </section>
