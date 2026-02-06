@@ -81,13 +81,6 @@
             >
               기능
             </a>
-            <NuxtLink
-              to="/press"
-              class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white py-2"
-              @click="mobileMenuOpen = false"
-            >
-              미디어 소개
-            </NuxtLink>
             <a
               href="/#download"
               class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white py-2"
@@ -95,6 +88,13 @@
             >
               다운로드
             </a>
+            <NuxtLink
+              to="/press"
+              class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white py-2"
+              @click="mobileMenuOpen = false"
+            >
+              미디어 소개
+            </NuxtLink>
           </div>
         </div>
       </transition>
