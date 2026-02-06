@@ -605,10 +605,10 @@ const animatedCountries = ref(0)
 const animatedCities = ref(0)
 const statsAnimated = ref(false)
 
-const targetUsers = 150
-const targetSouvenirs = 150
+const targetUsers = 170
+const targetSouvenirs = 130
 const targetCountries = 190
-const targetCities = 40000
+const targetCities = 48000
 
 const formatNumber = (num) => {
   return Math.floor(num).toLocaleString('ko-KR')
