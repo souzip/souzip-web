@@ -605,7 +605,7 @@ const animatedCountries = ref(0)
 const animatedCities = ref(0)
 const statsAnimated = ref(false)
 
-const targetUsers = 170
+const targetUsers = 200
 const targetSouvenirs = 130
 const targetCountries = 190
 const targetCities = 48000
