@@ -314,10 +314,9 @@
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 1 ? '300px' : '0px', opacity: openFaq === 1 ? 1 : 0 }">
               <div class="px-6 pb-5">
                 <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  <strong class="text-gray-900 dark:text-white">안드로이드:</strong> 둘러보기 기능으로 회원가입 없이 일부 기능을 사용할 수 있습니다.<br>
-                  <strong class="text-gray-900 dark:text-white">iOS:</strong> 회원가입이 필요합니다.<br><br>
-                  소셜 로그인만 지원하며, <strong class="text-gray-900 dark:text-white">카카오, 구글, 애플</strong>로 간편하게 가입하실 수 있습니다. (안드로이드는 애플 로그인 미지원)<br>
-                  기념품 저장, 여행 계획 등 모든 기능을 이용하시려면 로그인이 필요합니다.
+                  둘러보기 기능으로 회원가입 없이 일부 기능을 사용할 수 있습니다.<br><br>
+                  기념품 저장, 여행 계획, AI 맞춤 추천 등 모든 기능을 이용하시려면 로그인이 필요합니다.<br>
+                  소셜 로그인만 지원하며, <strong class="text-gray-900 dark:text-white">카카오, 구글, 애플</strong>로 간편하게 가입하실 수 있습니다. (안드로이드는 애플 로그인 미지원)
                 </p>
               </div>
             </div>
@@ -371,7 +370,7 @@
             <div class="overflow-hidden" style="transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);" :style="{ maxHeight: openFaq === 3 ? '200px' : '0px', opacity: openFaq === 3 ? 1 : 0 }">
               <div class="px-6 pb-5">
                 <p class="text-gray-600 dark:text-gray-300">
-                  전 세계 190개 이상의 국가와 40,000개 이상의 도시 기념품 정보를 제공하고 있으며, 지속적으로 확대되고 있습니다.
+                  전 세계 190개 이상의 국가와 48,000개 이상의 도시 기념품 정보를 제공하고 있으며, 지속적으로 확대되고 있습니다.
                 </p>
               </div>
             </div>
@@ -605,8 +604,8 @@ const animatedCountries = ref(0)
 const animatedCities = ref(0)
 const statsAnimated = ref(false)
 
-const targetUsers = 200
-const targetSouvenirs = 130
+const targetUsers = 220
+const targetSouvenirs = 100
 const targetCountries = 190
 const targetCities = 48000
 
