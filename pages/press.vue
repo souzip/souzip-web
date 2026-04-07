@@ -1,5 +1,5 @@
 <template>
-<div class="min-h-screen bg-white dark:bg-gray-900">
+  <div class="min-h-screen bg-white dark:bg-gray-900">
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-orange-50 to-white dark:from-gray-800 dark:to-gray-900">
       <div class="max-w-6xl mx-auto text-center">
@@ -17,17 +17,17 @@
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 items-stretch">
           <a
-            v-for="item in pressItems"
-            :key="item.id"
-            :href="item.url"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex flex-col h-full"
+              v-for="item in pressItems"
+              :key="item.id"
+              :href="item.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex flex-col h-full"
           >
             <!-- Thumbnail -->
-            <div 
-              class="relative h-48 overflow-hidden flex items-center justify-center"
-              :class="item.platform === 'Instagram' ? 'bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100' : 'bg-gradient-to-br from-orange-100 to-orange-50'"
+            <div
+                class="relative h-48 overflow-hidden flex items-center justify-center"
+                :class="item.platform === 'Instagram' ? 'bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100' : 'bg-gradient-to-br from-orange-100 to-orange-50'"
             >
               <template v-if="item.platform === 'Instagram'">
                 <svg class="w-20 h-20 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
@@ -36,36 +36,22 @@
               </template>
               <template v-else-if="item.thumbnail">
                 <img
-                  :src="item.thumbnail"
-                  :alt="item.title"
-                  class="w-full h-full object-cover"
+                    :src="item.thumbnail"
+                    :alt="item.title"
+                    class="w-full h-full object-cover"
                 />
               </template>
               <template v-else>
-                <!-- Blog Icon -->
                 <svg v-if="item.platform === 'Blog'" class="w-16 h-16" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
                 </svg>
-                <!-- Default Icon -->
                 <svg v-else class="w-16 h-16" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                 </svg>
               </template>
-              
+
               <!-- Platform Badge -->
               <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-                <!-- Instagram Icon Small -->
-                <!-- <svg v-if="item.platform === 'Instagram'" class="w-4 h-4" style="color: #FF6640;" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg> -->
-                <!-- Blog Icon Small -->
-                <!-- <svg v-else-if="item.platform === 'Blog'" class="w-4 h-4" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-                </svg> -->
-                <!-- Default Icon Small -->
-                <!-- <svg v-else class="w-4 h-4" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-                </svg> -->
                 <span>{{ item.platform }}</span>
               </div>
             </div>
@@ -101,30 +87,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <!-- <section class="py-16 px-4 bg-gray-50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-2xl md:text-3xl font-bold mb-4">
-          sou.zip을 소개하고 싶으신가요?
-        </h3>
-        <p class="text-gray-600 mb-8">
-          언론 보도, 블로그 리뷰, 소셜 미디어 소개 등 다양한 형태의 협업을 환영합니다
-        </p>
-        <a
-          href="mailto:contact@souzip.com"
-          class="inline-flex items-center gap-2 px-8 py-4 text-white rounded-xl transition-colors font-medium"
-          style="background-color: #FF6640;"
-          @mouseenter="$event.target.style.backgroundColor = '#E65A38'"
-          @mouseleave="$event.target.style.backgroundColor = '#FF6640'"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-          문의하기
-        </a>
-      </div>
-    </section> -->
   </div>
 </template>
 
@@ -134,13 +96,13 @@ import { ref } from 'vue'
 // 언론 보도 데이터
 const pressItems = ref([
   {
-    id: 1,
-    platform: 'Instagram',
-    title: '너 아직도 여행가서 냉장고 자석만 사오니? ✈️',
-    description: '\'수집\'은 해외여행 중 내 위치와 동선에 맞춰 기념품을 발견하고 그 기념품을 통해 여행의 기억을 남길 수 있도록 돕는 서비스입니다.',
-    date: '2026.01.31',
-    url: 'https://www.instagram.com/p/DUH9VMmAV3b/',
-    thumbnail: null
+    id: 3,
+    platform: 'Blog',
+    title: '기획·디자인·개발이 함께 만든 서비스, 수집 팀의 성장 스토리',
+    description: '스위프 앱 3기 대상을 수상한 수집 팀이 여행 기념품 경험에서 출발한 아이디어를 실제 서비스로 만들어낸 과정과 팀의 성장 스토리를 담았습니다.',
+    date: '2026.03.13',
+    url: 'https://blog.swyp.im/building-a-real-service-together/',
+    thumbnail: 'https://storage.ghost.io/c/eb/a6/eba6f764-3d28-44c8-a4d3-a9085e76e6db/content/images/size/w1200/2026/03/swyp_project_souzip_thumbnail-2.png'
   },
   {
     id: 2,
@@ -150,6 +112,15 @@ const pressItems = ref([
     date: '2026.02.04',
     url: 'https://uibowl.io/self-contents/cml7lmazi0006ib04bk1rcppz',
     thumbnail: 'https://boldy.s3.ap-northeast-2.amazonaws.com/article/d25d853b-dbec-47d5-99c4-54b61234bb21/400x400bb-75.webp'
+  },
+  {
+    id: 1,
+    platform: 'Instagram',
+    title: '너 아직도 여행가서 냉장고 자석만 사오니? ✈️',
+    description: '\'수집\'은 해외여행 중 내 위치와 동선에 맞춰 기념품을 발견하고 그 기념품을 통해 여행의 기억을 남길 수 있도록 돕는 서비스입니다.',
+    date: '2026.01.31',
+    url: 'https://www.instagram.com/p/DUH9VMmAV3b/',
+    thumbnail: null
   },
 ])
 </script>

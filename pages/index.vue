@@ -5,39 +5,39 @@
         <div class="absolute top-20 right-20 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-40"></div>
         <div class="absolute bottom-20 left-20 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-40"></div>
       </div>
-      
+
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div class="relative w-full max-w-6xl h-full">
           <div class="absolute top-20 left-8 md:left-20 w-20 h-20 md:w-32 md:h-32 character-walk-right">
             <img src="../public/1.svg" alt="캐릭터 1" class="w-full h-full object-contain" />
           </div>
-          
+
           <div class="absolute top-24 right-8 md:right-20 w-16 h-16 md:w-28 md:h-28 character-walk-left" style="animation-delay: 0.5s">
             <img src="../public/2.svg" alt="캐릭터 2" class="w-full h-full object-contain" />
           </div>
-          
+
           <div class="absolute bottom-32 left-8 md:left-20 w-20 h-20 md:w-36 md:h-36 character-walk-right" style="animation-delay: 1s">
             <img src="../public/3.svg" alt="캐릭터 3" class="w-full h-full object-contain" />
           </div>
-          
+
           <div class="absolute bottom-28 right-8 md:right-20 w-20 h-20 md:w-32 md:h-32 character-walk-left" style="animation-delay: 1.5s">
             <img src="../public/4.svg" alt="캐릭터 4" class="w-full h-full object-contain" />
           </div>
         </div>
       </div>
-      
+
       <div class="max-w-6xl mx-auto text-center">
         <div class="mb-8">
           <h1 class="text-3xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
             여행 기념품 정보는 <span style="color: #FF6640;">수집</span>에서!
           </h1>
         </div>
-        
+
         <p class="text-1xl md:text-4xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           위치 기반 여행 기념품 모음집, <span style="color: #FF6640;" class="font-semibold">sou.zip!</span>
         </p>
       </div>
-      
+
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
         <div class="flex flex-col items-center text-gray-400 dark:text-gray-500 animate-bounce">
           <span class="text-sm">Scroll</span>
@@ -47,14 +47,14 @@
         </div>
       </div>
     </section>
-    
+
     <section id="features" class="py-24 px-4 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-6xl mx-auto">
         <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           여행이 끝나도<br />
           <span style="color: #FF6640;">추억은 계속됩니다</span>
         </h3>
-        
+
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl transition-shadow">
             <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
@@ -68,7 +68,7 @@
               알려주는 특별한 기념품 정보
             </p>
           </div>
-          
+
           <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl transition-shadow">
             <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
               <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@
               딱 맞는 기념품을 찾아드려요
             </p>
           </div>
-          
+
           <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl transition-shadow">
             <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6">
               <svg class="w-7 h-7" style="color: #FF6640;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="py-24 px-4 bg-white dark:bg-gray-900">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
@@ -108,7 +108,7 @@
             전 세계 여행자들이 함께 만들어가는 기념품 이야기
           </p>
         </div>
-        
+
         <div ref="statsSection" class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div class="flex flex-col items-center justify-center p-6 rounded-2xl transition-colors">
             <div class="text-5xl md:text-6xl font-bold mb-3 text-center" style="color: #FF6640;">{{ formatNumber(animatedCountries) }}<span style="position: relative; top: -0.3rem;">+</span></div>
@@ -129,7 +129,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- 미디어 소개 섹션 -->
     <section class="py-24 px-4 bg-white dark:bg-gray-900 overflow-hidden">
       <div class="max-w-6xl mx-auto">
@@ -141,9 +141,9 @@
             다양한 미디어에서 주목하는 새로운 여행 경험
           </p>
         </div>
-        
+
         <div class="press-slider-wrapper mb-12">
-          <div 
+          <div
             class="press-slider-container"
             @mouseenter="pauseSlider"
             @mouseleave="handleMouseLeave"
@@ -162,7 +162,7 @@
                 rel="noopener noreferrer"
                 class="press-card group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden flex-shrink-0 flex flex-col"
               >
-                <div 
+                <div
                   class="relative h-48 overflow-hidden flex items-center justify-center"
                   :class="item.gradient"
                 >
@@ -199,10 +199,10 @@
           </div>
           </div>
         </div>
-        
+
         <div class="text-center">
-          <NuxtLink 
-            to="/press" 
+          <NuxtLink
+            to="/press"
             class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition-all"
             style="background-color: #FF6640; color: white;"
           >
@@ -214,7 +214,7 @@
         </div>
       </div>
     </section>
-    
+
     <section id="download" class="py-24 px-4 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
@@ -225,7 +225,7 @@
             여행의 순간을 특별하게 만들어줄 sou.zip을 만나보세요
           </p>
         </div>
-        
+
         <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           <!-- iOS 다운로드 -->
           <div class="flex flex-col items-center space-y-4">
@@ -251,7 +251,7 @@
               />
             </div>
           </div>
-          
+
           <!-- Android 다운로드 -->
           <div class="flex flex-col items-center space-y-4">
             <a
@@ -279,7 +279,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- FAQ 섹션 -->
     <section id="faq" class="py-24 px-4 bg-white dark:bg-gray-900">
       <div class="max-w-4xl mx-auto">
@@ -291,7 +291,7 @@
             sou.zip에 대해 궁금한 점이 있으신가요?
           </p>
         </div>
-        
+
         <div class="space-y-4">
           <!-- FAQ 아이템 1 -->
           <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
@@ -457,7 +457,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- 추가 문의 -->
         <div class="mt-12 text-center p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl">
           <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">더 궁금한 점이 있으신가요?</h4>
@@ -475,7 +475,7 @@
         </div>
       </div>
     </section>
-    
+
     <ScrollToTop />
   </div>
 </template>
@@ -517,6 +517,16 @@ const pressItems = ref([
     thumbnail: 'https://boldy.s3.ap-northeast-2.amazonaws.com/article/d25d853b-dbec-47d5-99c4-54b61234bb21/400x400bb-75.webp',
     gradient: 'bg-gradient-to-br from-orange-50 to-orange-100'
   },
+  {
+    id: 3,
+    platform: 'Blog',
+    title: '기획·디자인·개발이 함께 만든 서비스, 수집 팀의 성장 스토리',
+    description: '스위프 앱 3기 대상을 수상한 수집 팀이 여행 기념품 경험에서 출발한 아이디어를 실제 서비스로 만들어낸 과정과 팀의 성장 스토리를 담았습니다.',
+    date: '2026.03.13',
+    url: 'https://blog.swyp.im/building-a-real-service-together/',
+    thumbnail: 'https://storage.ghost.io/c/eb/a6/eba6f764-3d28-44c8-a4d3-a9085e76e6db/content/images/size/w1200/2026/03/swyp_project_souzip_thumbnail-2.png',
+    gradient: 'bg-gradient-to-br from-orange-50 to-orange-100'
+  },
 ])
 
 // 슬라이더 제어
@@ -548,7 +558,7 @@ const handleMouseMove = (e) => {
   const x = e.pageX - sliderContainer.value.offsetLeft
   const walk = (x - startX.value) * 2
   sliderContainer.value.scrollLeft = scrollLeft.value - walk
-  
+
   // 무한 스크롤 효과를 위한 위치 체크
   checkScrollPosition()
 }
@@ -569,16 +579,16 @@ const handleMouseLeave = () => {
 
 const checkScrollPosition = () => {
   if (!sliderContainer.value) return
-  
+
   const scrollWidth = sliderContainer.value.scrollWidth
   const clientWidth = sliderContainer.value.clientWidth
   const scrollLeft = sliderContainer.value.scrollLeft
-  
+
   // 한 세트의 너비 (카드 2개 + gap)
   const cardWidth = window.innerWidth <= 480 ? 280 : window.innerWidth <= 768 ? 300 : 400
   const gap = window.innerWidth <= 768 ? 16 : 24
   const setWidth = (cardWidth + gap) * 2
-  
+
   // 끝에 가까워지면 처음으로 되돌림
   if (scrollLeft >= setWidth * 4) {
     sliderContainer.value.scrollLeft = scrollLeft - setWidth * 4
@@ -616,28 +626,28 @@ const formatNumber = (num) => {
 const animateValue = (ref, start, end, duration) => {
   const startTime = performance.now()
   const range = end - start
-  
+
   const step = (currentTime) => {
     const elapsed = currentTime - startTime
     const progress = Math.min(elapsed / duration, 1)
-    
+
     const eased = 1 - (1 - progress) * (1 - progress)
-    
+
     ref.value = start + (range * eased)
-    
+
     if (progress < 1) {
       requestAnimationFrame(step)
     } else {
       ref.value = end
     }
   }
-  
+
   requestAnimationFrame(step)
 }
 
 const startStatsAnimation = () => {
   if (statsAnimated.value) return
-  
+
   statsAnimated.value = true
   animateValue(animatedUsers, 0, targetUsers, 2500)
   animateValue(animatedSouvenirs, 0, targetSouvenirs, 2500)
@@ -664,14 +674,14 @@ onMounted(() => {
     },
     { threshold: 0.3 }
   )
-  
+
   if (statsSection.value) {
     observer.observe(statsSection.value)
   }
-  
+
   // Get slider container element
   sliderContainer.value = document.querySelector('.press-slider-container')
-  
+
   // 스크롤 이벤트 리스너 추가
   if (sliderContainer.value) {
     // 초기 스크롤 위치를 중간으로 설정
@@ -679,7 +689,7 @@ onMounted(() => {
     const gap = window.innerWidth <= 768 ? 16 : 24
     const setWidth = (cardWidth + gap) * 2
     sliderContainer.value.scrollLeft = setWidth * 4
-    
+
     sliderContainer.value.addEventListener('scroll', checkScrollPosition)
   }
 })
@@ -794,12 +804,12 @@ onUnmounted(() => {
     animation: slide-mobile 20s linear infinite;
     gap: 1rem;
   }
-  
+
   .press-card {
     width: 300px;
     min-width: 300px;
   }
-  
+
   /* 모바일 애니메이션: 카드 2개 기준으로 한 세트 이동 */
   @keyframes slide-mobile {
     0% {
@@ -817,7 +827,7 @@ onUnmounted(() => {
     width: 280px;
     min-width: 280px;
   }
-  
+
   @keyframes slide-mobile {
     0% {
       transform: translateX(0);
