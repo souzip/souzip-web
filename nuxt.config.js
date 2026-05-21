@@ -85,7 +85,7 @@ export default defineNuxtConfig({
         { name: 'twitter:site', content: '@souzip' },
         // 네이버 검색 최적화
         { property: 'og:article:author', content: 'sou.zip' },
-        { name: 'naver-site-verification', content: '' }, // 네이버 서치어드바이저에서 발급
+        { name: 'naver-site-verification', content: '7f18a09e4ed19a6419ead0f8923323d92efff909' },
         // 구글 서치 콘솔
         { name: 'google-site-verification', content: '' }, // 구글 서치 콘솔에서 발급
         // 구조화된 데이터를 위한 추가 정보
